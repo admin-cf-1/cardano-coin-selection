@@ -83,6 +83,35 @@ to have:
 
 This section will describe the primary algorithms used in Cardano Wallet.
 
+-- TODO: Describe the overall type of the algorithm.
+
+## Parameters
+
+## Results
+
+## Failure Modes
+
+The algorithm terminates with an __error__ if:
+
+ 1.  The /total value/ of the initial UTxO set (the amount of money
+     /available/) is /less than/ the total value of the output list (the
+     amount of money /required/).
+
+    Retain names here.
+
+ 2.  The /number/ of entries in the initial UTxO set is /smaller than/ the
+     number of requested outputs.
+
+     Due to the nature of the algorithm, /at least one/ UTxO entry is
+     required /for each/ output.
+
+ 3.  Due to the particular /distribution/ of values within the initial UTxO
+     set, the algorithm depletes all entries from the UTxO set /before/ it
+     is able to pay for all requested outputs.
+
+ 4.  The /number/ of UTxO entries needed to pay for the requested outputs
+     would /exceed/ the upper limit specified by 'maximumInputCount'.
+
 ## Largest-First
 
 ## Random-Improve
@@ -234,23 +263,3 @@ When both phases are complete, the algorithm terminates.
 The /accumulated coin selection/ and /remaining UTxO set/ are returned to
 the caller.
 
-#### Failure Modes
-
-The algorithm terminates with an __error__ if:
-
- 1.  The /total value/ of the initial UTxO set (the amount of money
-     /available/) is /less than/ the total value of the output list (the
-     amount of money /required/).
-
- 2.  The /number/ of entries in the initial UTxO set is /smaller than/ the
-     number of requested outputs.
-
-     Due to the nature of the algorithm, /at least one/ UTxO entry is
-     required /for each/ output.
-
- 3.  Due to the particular /distribution/ of values within the initial UTxO
-     set, the algorithm depletes all entries from the UTxO set /before/ it
-     is able to pay for all requested outputs.
-
- 4.  The /number/ of UTxO entries needed to pay for the requested outputs
-     would /exceed/ the upper limit specified by 'maximumInputCount'.
