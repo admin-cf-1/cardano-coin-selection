@@ -92,7 +92,8 @@ import qualified Data.List.NonEmpty as NE
 --
 -- __In this phase, the algorithm attempts to improve upon each of the UTxO__
 -- __selections made in the previous phase, by conservatively expanding the__
--- __selection made for each output.__
+-- __selection made for each output in order to generate improved change__
+-- __values.__
 --
 -- During this phase, the algorithm:
 --
@@ -191,6 +192,9 @@ import qualified Data.List.NonEmpty as NE
 --
 -- Therefore, for a UTxO set with a large amount of dust, there's a high
 -- probability that a random subset will include a large amount of dust.
+--
+-- Over time, this approach will tend to limit the amount of dust that
+-- accumulates in the UTxO set.
 --
 -- === Principle 2: Change Management
 --
