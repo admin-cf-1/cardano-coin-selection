@@ -234,7 +234,7 @@ When both phases are complete, the algorithm terminates.
 The /accumulated coin selection/ and /remaining UTxO set/ are returned to
 the caller.
 
-### Failure Modes
+#### Failure Modes
 
 The algorithm terminates with an __error__ if:
 
