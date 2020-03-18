@@ -108,7 +108,9 @@ failure modes that they have in common.
 
 ### _Initial UTxO Set_
 
-### _Initial Output List_
+### _Requested Output List_
+
+### _Maximum Input Count Function_
 
 ## Results
 
@@ -124,25 +126,29 @@ This section categorizes the various failure modes.
 
 ### UTxO Balance Insufficient
 
-This failure occurs when the total value of the [initial UTxO
-set](#initial-utxo-set) (the amount of money _available_) is _less than_ the
-total value of the output list (the amount of money _required_), which is given
-by the sum of the coin values in the [initial output
-list](#initial-output-list).
+This failure occurs when the total value of the entries within the [initial
+UTxO set](#initial-utxo-set) (the amount of money _available_) is _less than_
+the the total value of all entries in the [initial output
+list](#requested-output-list) (the amount of money _required).
 
 ### UTxO Not Fragmented Enough
 
-All algorithms require _at least one_ UTxO entry for each output specified in
-the _output list_ parameter.
+This failure occurs when the _number_ of entries in the [initial UTxO
+set](#initial-utxo-set) is /smaller than/ the number of entries in the
+[requested output list](#requested-output-list).
 
-This failure occurs when the _number_ of entries in the initial UTxO set is
-/smaller than/ the number of requested outputs.
+All algorithms require that there is _at least one_ UTxO entry available for
+each output.
 
+### UTxO Fully Depleted
 
+This failure occurs if the algorithm depletes all entries from the [initial
+UTxO set](#initial-utxo-set) /before/ it is able to pay for all outputs in the
+[requested output list](#requested output list).
 
- 3.  Due to the particular /distribution/ of values within the initial UTxO
-     set, the algorithm depletes all entries from the UTxO set /before/ it
-     is able to pay for all requested outputs.
+### Maximum Input Count Exceeded
+
+This failure occurs if the _number_ of UTxO entries needed to pay for the outputs
 
  4.  The /number/ of UTxO entries needed to pay for the requested outputs
      would /exceed/ the upper limit specified by 'maximumInputCount'.
