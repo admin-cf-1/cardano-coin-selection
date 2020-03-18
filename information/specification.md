@@ -244,6 +244,10 @@ total above the upper bound.
 
 This is initially equal to the [initial UTxO set](#initial-utxo-set) parameter.
 
+#### Accumulated Coin Selection
+
+This is initially empty.
+
 ### Phases of Computation
 
 This section will describe the phases of the algorithm in detail.
@@ -274,16 +278,17 @@ values.
 
 During this phase, the algorithm:
 
-  *  processes outputs in /ascending order of coin value/.
+  * processes outputs in _ascending order of coin value_.
 
-  *  continues to maintain the /remaining UTxO set/ produced by the previous
-     phase.
+  * continues to maintain the [remaining UTxO set](#remaining-utxo-set)
+    produced by the previous phase.
 
-  *  maintains an /accumulated coin selection/, which is initially /empty/.
+  * incrementally populates the
+    [accumulated coin selection](#accumulated-coin-selection).
 
 For each output of value __/v/__, the algorithm:
 
- 1.  __Calculates a /target range/__ for the total value of inputs used to
+ 1.  **Calculates a _target range_** for the total value of inputs used to
      pay for that output, defined by the triplet:
 
      (/minimum/, /ideal/, /maximum/) = (/v/, /2v/, /3v/)
