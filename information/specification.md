@@ -64,15 +64,15 @@ to be paid back to the wallet by creating one or more _change outputs_.
 There are a number of issues which make the problem of coin selection more
 complicated than it would initially appear.
 
- * Each transaction has a maximum size, as defined by the protocol. The size of
-   a transaction increases as we add more inputs or outputs.
+ * Each transaction has a _maximum size_, as defined by the protocol. The size
+   of a transaction increases as we add more inputs or outputs.
 
    Therefore, there's a practical limit on the number of coins we can select
    for any given transaction.
 
  * The most obvious strategy for coin selection, which consists of trying to
    get as close to the requested value as possible, will tend (over time) to
-   create a lot of dust: small unspent outputs.
+   create a lot of _dust_: small unspent outputs.
 
    Dust outputs are a problem, because even if the total value of dust in a
    wallet is more than enough to cover a given target amount, if we attempt to
@@ -88,7 +88,8 @@ complicated than it would initially appear.
    single output, we need at least as many UTxO entries as there are outputs.
 
    Secondly, the approach of coalescing all change into a single output is
-   considered to be bad for privacy reasons.
+   widely considered to have negative privacy implications, the discussion of
+   which is beyond the scope of this article.
 
 There are several properties that we would like a coin selection algorithm
 to have:
