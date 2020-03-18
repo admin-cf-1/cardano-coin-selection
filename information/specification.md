@@ -4,6 +4,8 @@
 * [Background](#background)
   * [What is Coin Selection?](#what-is-coin-selection)
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
+    * [Issues](#issues)
+    * [Desirable Properties](#desirable-properties)
 * [Common Interface](#common-interface)
   * [Parameters](#parameters)
   * [Results](#results)
@@ -61,6 +63,8 @@ to be paid back to the wallet by creating one or more _change outputs_.
 
 ## Why is Coin Selection Non-Trivial?
 
+### Issues
+
 There are a number of **issues** which make the problem of coin selection more
 complicated than it would initially appear.
 
@@ -90,6 +94,8 @@ complicated than it would initially appear.
    Secondly, the approach of coalescing all change into a single output is
    widely considered to have negative privacy implications, the discussion of
    which is beyond the scope of this article.
+
+### Desirable Properties
 
 There are several **desirable properties** that we would like a coin selection
 algorithm to have:
