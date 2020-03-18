@@ -9,7 +9,7 @@
 * [Common Interface](#common-interface)
   * [Type Definitions](#type-definitions)
     * [Address](#address)
-    * [Coin Amount](#coin amount)
+    * [Coin Amount](#coin-amount)
     * [Transaction Input](#transaction-input)
     * [Transaction Output](#transaction-output)
     * [UTxO Set](#utxo-set)
