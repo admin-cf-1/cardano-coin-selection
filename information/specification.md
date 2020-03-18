@@ -173,11 +173,17 @@ A list of requested [transaction outputs](transaction-output).
 
 ### _Maximum Input Count Function_
 
+_(definition of maximum input count function)_
+
 ## Results
 
 ### _Final UTxO Set_
 
+_(definition of final UTxO set)_
+
 ### _Final Coin Selection_
+
+_(definition of final coin selection)_
 
 ## Failure Modes
 
@@ -217,6 +223,14 @@ function](#maximum-input-count-function).
 # Implementations
 
 ## Largest-First
+
+The **Largest-First** coin selection algorithm processes
+[outputs](#requested-output-list) in _descending order of coin value, from
+_largest_ to _smallest_.
+
+For each output, it repeatedly selects the /largest/ remaining unspent UTxO
+entry until the value of selected entries is greater than or equal to the
+value of that output.
 
 ## Random-Improve
 
