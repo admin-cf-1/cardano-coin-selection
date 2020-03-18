@@ -7,7 +7,9 @@
     * [Issues](#issues)
     * [Desirable Properties](#desirable-properties)
 * [Common Interface](#common-interface)
-  * [Types](#types)
+  * [Type Definitions](#type-definitions)
+    * [Address](#address)
+    * [Coin Amount](#coin amount)
     * [Transaction Input](#transaction-input)
     * [Transaction Output](#transaction-output)
     * [UTxO Set](#utxo-set)
@@ -128,7 +130,7 @@ interface_.
 
 This section will describe this common interface.
 
-## Types
+## Type Definitions
 
 ### Address
 
