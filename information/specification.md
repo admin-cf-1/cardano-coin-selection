@@ -12,9 +12,9 @@
   * [Largest-First](#largest-first)
   * [Random-Improve](#random-improve)
     * [Motivating Principles](#motivating-principles)
-      * [Dust Management](#dust-management)
-      * [Change Management](#change-management)
-      * [Performance Management](#performance-management)
+      * [Dust Management](#principle-1-dust-management)
+      * [Change Management](#principle-2-change-management)
+      * [Performance Management](#principle-3-performance-management)
 
 # Purpose
 
@@ -178,7 +178,7 @@ selection made for each output, in order to generate improved change values.
 
 There are several motivating principles behind the design of the algorithm.
 
-#### Dust Management
+#### Principle 1: Dust Management
 
 The probability that random selection will choose dust entries from a UTxO
 set increases with the proportion of dust in the set.
@@ -189,18 +189,19 @@ probability that a random subset will include a large amount of dust.
 Over time, selecting entries randomly in this way will tend to limit amount of
 dust that accumulates in the UTxO set.
 
-#### Change Management
+#### Principle 2: Change Management
 
-As mentioned in the background section, coin selection algorithms should, over
-time, create a UTxO set that has useful outputs: outputs that will allow us to
-process future payments with a minimum number of inputs.
+As mentioned in the [background](#background) section, coin selection
+algorithms should, over time, create a UTxO set that has useful outputs:
+outputs that will allow us to process future payments with a minimum number of
+inputs.
 
 If for each payment request of value **v** we create a change output of
 *roughly* the same value **v**, then we will end up with a distribution of
 change values that matches the typical value distribution of payment
 requests.
 
-#### Performance Management
+#### Principle 3: Performance Management
 
 Searching the UTxO set for additional entries to *improve* our change outputs
 is *only* useful if the UTxO set contains entries that are sufficiently
