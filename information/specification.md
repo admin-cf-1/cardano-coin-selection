@@ -40,7 +40,7 @@
 
 # Purpose
 
-The purpose of this article is to describe, in human-readable terms, the coin
+The purpose of this article is to describe, in _human-readable terms_, the coin
 selection algorithms used by Cardano Wallet and other parts of the Cardano
 ecosystem.
 
