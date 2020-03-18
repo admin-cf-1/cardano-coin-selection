@@ -232,6 +232,100 @@ For each output, it repeatedly selects the /largest/ remaining unspent UTxO
 entry until the value of selected entries is greater than or equal to the
 value of that output.
 
+### State Maintained by the Algorithm
+
+This section describes state maintained by the algorithm at all stages of
+processing.
+
+####  Remaining UTxO List
+
+This is initially equal to the given /initial UTxO set/ parameter, sorted into
+/descending order of coin value/.
+
+The /head/ of the list is always the remaining UTxO entry with the /largest
+coin value/.
+
+Entries are incrementally removed from the /head/ of the list as the algorithm
+proceeds, until the list is empty.
+
+#### Unpaid Ouput List
+
+This is initially equal to the given /output list/ parameter, sorted into
+/descending order of coin value/.
+
+The /head/ of the list is always the unpaid output with the /largest coin
+value/.
+
+Entries are incrementally removed from the /head/ of the list as the algorithm
+proceeds, until the list is empty.
+
+#### Accumulated Coin Selection
+
+This is initially /empty/.
+
+Entries are incrementally added as each output is paid for, until the
+/unpaid output list/ is empty.
+
+### Cardinality Rules
+
+The algorithm requires that:
+
+ 1.  Each output from the given /output list/ is paid for by /one or more/
+     entries from the /initial UTxO set/.
+
+ 2.  Each entry from the /initial UTxO set/ is used to pay for /at most one/
+     output from the given /output list/.
+
+     (A single UTxO entry __cannot__ be used to pay for multiple outputs.)
+
+### Order of Processing
+
+The algorithm proceeds according to the following sequence of steps:
+
+ * /Step 1/
+
+   Remove a single /unpaid output/ from the head of the
+   /unpaid output list/.
+
+ * /Step 2/
+
+   Repeatedly remove UTxO entries from the head of the
+   /remaining UTxO list/ until the total value of entries removed is
+   /greater than or equal to/ the value of the /removed output/.
+
+ * /Step 3/
+
+   Use the /removed UTxO entries/ to pay for the /removed output/.
+
+   This is achieved by:
+
+    * adding the /removed UTxO entries/ to the 'inputs' field of the
+      /accumulated coin selection/.
+    * adding the /removed output/ to the 'outputs' field of the
+      /accumulated coin selection/.
+
+ * /Step 4/
+
+   If the /total value/ of the /removed UTxO entries/ is greater than the
+   value of the /removed output/, generate a coin whose value is equal to
+   the exact difference, and add it to the 'change' field of the
+   /accumulated coin selection/.
+
+ * /Step 5/
+
+   If the /unpaid output list/ is empty, __terminate__ here.
+
+   Otherwise, return to /Step 1/.
+
+### Termination
+
+The algorithm terminates __successfully__ if the /remaining UTxO list/ is
+not depleted before the /unpaid output list/ can be fully depleted (i.e., if
+all the outputs have been paid for).
+
+The /accumulated coin selection/ and /remaining UTxO list/ are returned to
+the caller.
+
 ## Random-Improve
 
 The **Random-Improve** coin selection algorithm works in _two phases_.
