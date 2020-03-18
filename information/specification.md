@@ -106,28 +106,39 @@ failure modes that they have in common.
 
 ## Parameters
 
-* *initial UTxO set*
-* *output list*
+### Initial UTxO Set
+
+### Initial Output List
 
 ## Results
 
-* *remaining UTxO set*
-* *coin selection*
+### Final UTxO Set
+
+### Final Coin Selection
 
 ## Failure Modes
 
-There are a number of ways in which a coin selection algorithm can fail. This
-section categorizes the various failure modes.
+There are a number of ways in which a coin selection algorithm can fail.
 
- 1.  The total value of the initial UTxO set (the amount of money _available_)
-     is _less than_ the total value of the output list (the amount of money
-     _required_).
+This section categorizes the various failure modes.
 
- 2.  The /number/ of entries in the initial UTxO set is /smaller than/ the
-     number of requested outputs.
+### UTxO Balance Insufficient
 
-     Due to the nature of the algorithm, /at least one/ UTxO entry is
-     required /for each/ output.
+This failure occurs when the total value of the [initial UTxO
+set](#initial-utxo-set) (the amount of money _available_) is _less than_ the
+total value of the output list (the amount of money _required_), which is given
+by the sum of the coin values in the [initial output
+list](#initial-output-list).
+
+### UTxO Not Fragmented Enough
+
+All algorithms require _at least one_ UTxO entry for each output specified in
+the _output list_ parameter.
+
+This failure occurs when the _number_ of entries in the initial UTxO set is
+/smaller than/ the number of requested outputs.
+
+
 
  3.  Due to the particular /distribution/ of values within the initial UTxO
      set, the algorithm depletes all entries from the UTxO set /before/ it
