@@ -172,7 +172,7 @@ each_ output.
 
 This failure occurs if the algorithm depletes all entries from the [initial
 UTxO set](#initial-utxo-set) _before_ it is able to pay for all outputs in the
-[requested output list](#requested output list).
+[requested output list](#requested-output-list).
 
 ### Maximum Input Count Exceeded
 
@@ -189,13 +189,14 @@ function](#maximum-input-count-function).
 
 The **Random-Improve** coin selection algorithm works in **two phases**.
 
-In the first phase, the algorithm iterates through each of the given outputs in
-descending order of coin value. For each output, the algorithm randomly selects
-UTxO entries until the total value of selected entries is enough to pay for the
-ouput.
+In the first phase, the algorithm iterates through each of the [requested
+outputs](#requested-output-list) in descending order of coin value. For each
+output, the algorithm selects entries at **random** from the [initial UTxO
+set](#initial-utxo-set) until the total value of selected entries is enough to
+pay for that ouput.
 
-In the second phase, the algorithm attempts to improve upon each of the UTxO
-selections made in the previous phase, by conservatively expanding the
+In the second phase, the algorithm attempts to **improve** upon each of the
+UTxO selections made in the previous phase, by conservatively expanding the
 selection made for each output, in order to generate improved change values.
 
 ### Motivating Principles
