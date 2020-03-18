@@ -2,14 +2,13 @@
 
 * [Purpose](#purpose)
 * [Background](#background)
-  * [What is Coin Selection?](#what-is-coin-selection)
-  * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
-* [Algorithms](#algorithms)
-  * [Interface]()
+    * [What is Coin Selection?](#what-is-coin-selection)
+    * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
+* [Algorithm Interface](#algorithms)
     * [Parameters]()
     * [Result Values]()
     * [Error Conditions]()
-  * [Implementations]()
+* [Algorithm Implementations]()
     * [Largest-First]()
     * [Random-Improve]()
 
