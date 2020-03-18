@@ -286,7 +286,7 @@ During this phase, the algorithm:
   * incrementally populates the
     [accumulated coin selection](#accumulated-coin-selection).
 
-For each output of value __/v/__, the algorithm:
+For each output of value **_v_**, the algorithm:
 
  1.  **Calculates a _target range_** for the total value of inputs used to
      pay for that output, defined by the triplet:
