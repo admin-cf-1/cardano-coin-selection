@@ -55,9 +55,9 @@ in a given transaction. Consequently, in the case where it's not possible to
 cover the target amount exactly, the wallet software must arrange that change
 is paid back to the wallet.
 
-Coin selection refers to the process of choosing unspent outputs from a
-wallet's UTxO set in order to make a payment, and arranging for change to be
-paid back to the wallet by creating one or more change outputs.
+Coin selection refers to the process of choosing _unspent outputs_ from a
+wallet's UTxO set in order to make one or payments, and arranging for _change_
+to be paid back to the wallet by creating one or more _change outputs_.
 
 ## Why is Coin Selection Non-Trivial?
 
