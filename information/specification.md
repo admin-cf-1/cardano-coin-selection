@@ -12,6 +12,7 @@
   * [Implementations](#implementations)
     * [Largest-First](#largest-first)
     * [Random-Improve](#random-improve)
+      * [Motivating Principles](#motivating-principles)
 
 # Purpose
 
@@ -108,7 +109,12 @@ failure modes that they have in common.
 
 ### _Initial UTxO Set_
 
+This corresponds to the UTxO set of a wallet.
+
 ### _Requested Output List_
+
+A list of requested outputs, where each output is a 2-tuple that consists of a
+_target address_ and an _amount_.
 
 ### _Maximum Input Count Function_
 
@@ -137,25 +143,27 @@ This failure occurs when the _number_ of entries in the [initial UTxO
 set](#initial-utxo-set) is _smaller than_ the number of entries in the
 [requested output list](#requested-output-list).
 
-All algorithms require that there is _at least one_ UTxO entry available for
-each output.
+All algorithms require that there is _at least one_ UTxO entry available _for
+each_ output.
 
 ### UTxO Fully Depleted
 
 This failure occurs if the algorithm depletes all entries from the [initial
-UTxO set](#initial-utxo-set) /before/ it is able to pay for all outputs in the
+UTxO set](#initial-utxo-set) _before_ it is able to pay for all outputs in the
 [requested output list](#requested output list).
 
 ### Maximum Input Count Exceeded
 
-This failure occurs if the _number_ of UTxO entries needed to pay for the outputs
+This failure occurs if the _number_ of UTxO entries needed to pay for the
+outputs in the [requested output list](#requested-output-list) exceeds the
+upper limit specified by the [maximum input count
+function](#maximum-input-count-function).
 
- 4.  The /number/ of UTxO entries needed to pay for the requested outputs
-     would /exceed/ the upper limit specified by 'maximumInputCount'.
+## Implementations
 
-## Largest-First
+### Largest-First
 
-## Random-Improve
+### Random-Improve
 
 The **Random-Improve** coin selection algorithm works in **two phases**.
 
@@ -168,11 +176,11 @@ In the second phase, the algorithm attempts to improve upon each of the UTxO
 selections made in the previous phase, by conservatively expanding the
 selection made for each output, in order to generate improved change values.
 
-### Motivating Principles
+#### Motivating Principles
 
 There are several motivating principles behind the design of the algorithm.
 
-#### Principle 1: Dust Management
+##### Principle 1: Dust Management
 
 The probability that random selection will choose dust entries from a UTxO
 set increases with the proportion of dust in the set.
@@ -183,7 +191,7 @@ probability that a random subset will include a large amount of dust.
 Over time, selecting entries randomly in this way will tend to limit amount of
 dust that accumulates in the UTxO set.
 
-#### Principle 2: Change Management
+##### Principle 2: Change Management
 
 As mentioned in the background section, coin selection algorithms should, over
 time, create a UTxO set that has useful outputs: outputs that will allow us to
@@ -194,22 +202,13 @@ If for each payment request of value **v** we create a change output of
 change values that matches the typical value distribution of payment
 requests.
 
-#### Principle 3: Performance Management
+##### Principle 3: Performance Management
 
 Searching the UTxO set for additional entries to *improve* our change outputs
 is *only* useful if the UTxO set contains entries that are sufficiently
 small enough. But it is precisely when the UTxO set contains many small
 entries that it is less likely for a randomly-chosen UTxO entry to push the
 total above the upper bound.
-
-### Parameters of the Algorithm
-
-The algorithm accepts the following parameters:
-
- * An initial UTXO set, corresponding to the UTxO set of a wallet.
-
- * A list of desired outputs, where each output is a 2-tuple that consists of a
-   target address and an amount.
 
 ### Phases of Computation
 
