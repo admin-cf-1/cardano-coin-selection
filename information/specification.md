@@ -101,11 +101,11 @@ There are several desirable properties that we would like a coin selection
 algorithm to have. These properties include the following:
 
  * A coin selection algorithm should, over the course of time, aim to generate
-   and maintain a UTxO set with "useful" outputs; that is, outputs that allow
-   us to process future payments with a minimum number of inputs.
+   and maintain a UTxO set with _useful_ outputs: that is, outputs that allow
+   us to process future payments with a _minimum_ number of inputs.
 
  * A coin selection algorithm should employ strategies to limit the
-   amount of dust that accumulates in the UTxO set.
+   amount of _dust_ that accumulates in the UTxO set.
 
 # Common Interface
 
