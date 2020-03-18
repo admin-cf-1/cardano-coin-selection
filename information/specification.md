@@ -8,7 +8,7 @@
   * [Common Interface](#common-interface)
     * [Parameters](#parameters)
     * [Results](#results)
-    * [Error Conditions](#error-conditions)
+    * [Failure Modes](#failure-modes)
   * [Implementations](#implementations)
     * [Largest-First](#largest-first)
     * [Random-Improve](#random-improve)
