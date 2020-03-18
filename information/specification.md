@@ -106,31 +106,13 @@ failure modes that they have in common.
 
 ## Parameters
 
-* *initial UTxO set*.
-
-  This specifies
-
-  is initially equal to the given /initial UTxO set/ parameter,
-  sorted into /descending order of coin value/.
-
-  The /head/ of the list is always the remaining UTxO entry with the
-  /largest coin value/.
-
-  Entries are incrementally removed from the /head/ of the list as the
-  algorithm proceeds, until the list is empty.
-
-2.  An __/unpaid output list/__
-
-    This is initially equal to the given /output list/ parameter, sorted
-    into /descending order of coin value/.
-
-    The /head/ of the list is always the unpaid output with the
-    /largest coin value/.
-
-    Entries are incrementally removed from the /head/ of the list as the
-    algorithm proceeds, until the list is empty.
+* *initial UTxO set*
+* *output list*
 
 ## Results
+
+* *remaining UTxO set*
+* *coin selection*
 
 ## Failure Modes
 
