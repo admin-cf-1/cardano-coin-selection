@@ -1,3 +1,18 @@
+# Contents
+
+* [Purpose](#purpose)
+* [Background](#background)
+  * [What is Coin Selection](#what-is-coin-selection)
+  * [Why is Coin Selection Non-Trivial](#why-is-coin-selection-non-trivial)
+* [Algorithms](#algorithms)
+  * [Interface]()
+    * [Parameters]()
+    * [Result Values]()
+    * [Error Conditions]()
+  * [Implementations]()
+    * [Largest-First]()
+    * [Random-Improve]()
+
 # Purpose
 
 The purpose of this article is to describe, in human-readable terms, the coin
@@ -66,8 +81,6 @@ complicated than it would initially appear.
 
    Secondly, the approach of coalescing all change into a single output is
    considered to be bad for privacy reasons.
-
-## What Properties of a Coin Selection Algorithm are Desirable?
 
 There are several properties that we would like a coin selection algorithm
 to have:
