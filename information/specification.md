@@ -16,8 +16,8 @@
       * [Principle 2: Change Management](#principle-2-change-management)
       * [Principle 3: Performance Management](#principle-3-performance-management)
     * [Phases of Computation](#phases-of-computation)
-      * [Phase 1: Random Selection)(#phase-1-random-selection)
-      * [Phase 2: Improvement)(#phase-2-improvement)
+      * [Phase 1: Random Selection](#phase-1-random-selection)
+      * [Phase 2: Improvement](#phase-2-improvement)
     * [Termination](#termination)
 
 # Purpose
