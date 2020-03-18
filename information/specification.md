@@ -6,14 +6,14 @@
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
     * [Issues](#issues)
     * [Desirable Properties](#desirable-properties)
+* [Definitions](#definitions)
+  * [Address](#address)
+  * [Coin Amount](#coin-amount)
+  * [Transaction Input](#transaction-input)
+  * [Transaction Output](#transaction-output)
+  * [UTxO Set](#utxo-set)
+  * [Coin Selection](#coin-selection)
 * [Common Interface](#common-interface)
-  * [Type Definitions](#type-definitions)
-    * [Address](#address)
-    * [Coin Amount](#coin-amount)
-    * [Transaction Input](#transaction-input)
-    * [Transaction Output](#transaction-output)
-    * [UTxO Set](#utxo-set)
-    * [Coin Selection](#coin-selection)
   * [Parameters](#parameters)
     * [Initial UTxO Set](#initial-utxo-set)
     * [Requested Output List](#requested-output-list)
@@ -123,40 +123,40 @@ algorithm to have. These properties include the following:
  * A coin selection algorithm should employ strategies to limit the
    amount of _dust_ that accumulates in the UTxO set.
 
+# Definitions
+
+## Address
+
+_(definition of address)_
+
+## Coin Amount
+
+A _coin amount_ is a non-negative integer value that represents a number of
+[Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
+
+## Transaction Input
+
+_(definition of transaction input)_
+
+## Transaction Output
+
+A _transaction output_ is a pair of values, consisting of a
+[target address](#address) and a [coin amount](#coin-amount).
+
+## UTxO Set
+
+_(definition of UTxO set)_
+
+## Coin Selection
+
+_(definition of coin selection)_
+
 # Common Interface
 
 All coin selection algorithms described by this article implement a _common
 interface_.
 
 This section will describe this common interface.
-
-## Type Definitions
-
-### Address
-
-_(definition of address)_
-
-### Coin Amount
-
-A _coin amount_ is a non-negative integer value that represents a number of
-[Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
-
-### Transaction Input
-
-_(definition of transaction input)_
-
-### Transaction Output
-
-A _transaction output_ is a pair of values, consisting of a
-[target address](#address) and a [coin amount](#coin-amount).
-
-### UTxO Set
-
-_(definition of UTxO set)_
-
-### Coin Selection
-
-_(definition of coin selection)_
 
 ## Parameters
 
