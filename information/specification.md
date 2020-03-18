@@ -116,13 +116,12 @@ failure modes that they have in common.
 
 ## Failure Modes
 
-The algorithm terminates with an __error__ if:
+A coin selection algorithm terminates with an __*error*__ if:
 
  1.  The /total value/ of the initial UTxO set (the amount of money
      /available/) is /less than/ the total value of the output list (the
      amount of money /required/).
 
-    Retain names here.
 
  2.  The /number/ of entries in the initial UTxO set is /smaller than/ the
      number of requested outputs.
