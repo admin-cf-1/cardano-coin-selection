@@ -12,9 +12,13 @@
   * [Largest-First](#largest-first)
   * [Random-Improve](#random-improve)
     * [Motivating Principles](#motivating-principles)
-      * [Dust Management](#principle-1-dust-management)
-      * [Change Management](#principle-2-change-management)
-      * [Performance Management](#principle-3-performance-management)
+      * [Principle 1: Dust Management](#principle-1-dust-management)
+      * [Principle 2: Change Management](#principle-2-change-management)
+      * [Principle 3: Performance Management](#principle-3-performance-management)
+    * [Phases of Computation](#phases-of-computation)
+      * [Phase 1: Random Selection)(#phase-1-random-selection)
+      * [Phase 2: Improvement)(#phase-2-improvement)
+    * [Termination](#termination)
 
 # Purpose
 
@@ -191,10 +195,10 @@ amount of dust that accumulates in the UTxO set.
 
 #### Principle 2: Change Management
 
-As mentioned in the [background](#background) section, coin selection
-algorithms should, over time, create a UTxO set that has _useful_ outputs:
-outputs that will allow us to process future payments with a minimum number of
-inputs.
+As mentioned in the [background](#background) section, it is desirable that
+coin selection algorithms, over time, are able to create UTxO sets that have
+_useful_ outputs: outputs that will allow us to process future payments with a
+minimum number of inputs.
 
 If for each payment request of value **v** we create a change output of
 _roughly_ the same value **v**, then we will end up with a distribution of
