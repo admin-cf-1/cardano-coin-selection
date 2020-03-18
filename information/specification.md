@@ -106,15 +106,15 @@ failure modes that they have in common.
 
 ## Parameters
 
-### Initial UTxO Set
+### _Initial UTxO Set_
 
-### Initial Output List
+### _Initial Output List_
 
 ## Results
 
-### Final UTxO Set
+### _Final UTxO Set_
 
-### Final Coin Selection
+### _Final Coin Selection_
 
 ## Failure Modes
 
