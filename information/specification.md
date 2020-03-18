@@ -40,11 +40,12 @@ _value_, and the total value of a wallet is the _sum_ of these values.
 
 When making a payment with money held in a physical wallet, we typically select
 a number of coins and banknotes from the wallet that, when added together,
-_cover_ the required amount. Ideally, we'd always be able to select just enough
-to cover the exact amount required.  However, given that coins and banknotes
-have fixed values (and cannot be cut in half), it's often impossible to select
-the exact amount required. In such cases, we typically give the recipient more
-than the required amount, and then receive the excess value back as _change_.
+_cover_ the required amount. Ideally, we'd always be able to select _just
+enough_ to cover the exact amount required.  However, given that coins and
+banknotes have fixed values (and cannot be subdivided), it's often _impossible_
+to select the exact amount required. In such cases, we typically give the
+recipient _more_ than the required amount, and then receive the excess value
+back as _change_.
 
 Similarly, when using a Cardano wallet to make a payment, the wallet software
 must choose unspent outputs from the wallet's UTxO set, so that the total value
