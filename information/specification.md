@@ -109,17 +109,20 @@ algorithm to have. These properties include the following:
 
 # Common Interface
 
-In general, algorithms used for coin selection implement a common interface.
+All coin selection algorithms described by this article implement a _common
+interface_, defined by a common set of parameters, standard result types, and
+a common set of failure modes.
 
-This section will describe the parameters that are common to all coin selection
-algorithms described by this article, the results that they produce, and the
-failure modes that they have in common.
+This section will describe this common interface.
 
 ## Parameters
 
+All coin selection algorithms accept a common set of parameters.
+
 ### _Initial UTxO Set_
 
-This corresponds to the UTxO set of a wallet.
+This corresponds to the UTxO set of a wallet, the set of unspent transaction
+outputs.
 
 ### _Requested Output List_
 
