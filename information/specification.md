@@ -293,39 +293,40 @@ For each output of value **_v_**, the algorithm:
 
      (_minimum_, _ideal_, _maximum_) = (_v_, _2v_, _2v_)
 
- 2.  __Attempts to /improve/ upon the /existing UTxO selection/__ for that
+ 2.  **Attempts to _improve_ upon the _existing UTxO selection_** for that
      output, by repeatedly selecting additional entries at random from the
-     /remaining UTxO set/, stopping when the selection can be improved upon
-     no further.
+     [remaining UTxO set](#remaining-utxo-set), stopping when the selection can
+     be improved upon no further.
 
-     A selection with value /v1/ is considered to be an /improvement/ over a
-     selection with value /v0/ if __all__ of the following conditions are
+     A selection with value _v1_ is considered to be an _improvement_ over a
+     selection with value _v0_ if **all** of the following conditions are
      satisfied:
 
-      * __Condition 1__: we have moved closer to the /ideal/ value:
+      * **Condition 1**: we have moved closer to the _ideal_ value:
 
-            abs (/ideal/ − /v1/) < abs (/ideal/ − /v0/)
+            abs (_ideal_ − _v1_) < abs (_ideal_ − _v0_)
 
-      * __Condition 2__: we have not exceeded the /maximum/ value:
+      * **Condition 2**: we have not exceeded the _maximum_ value:
 
-            /v1/ ≤ /maximum/
+            _v1_ ≤ _maximum_
 
-      * __Condition 3__: when counting cumulatively across all outputs
-      considered so far, we have not selected more than the /maximum/ number
-      of UTxO entries specified by 'maximumInputCount'.
+      * **Condition 3**: when counting cumulatively across all outputs
+        considered so far, we have not selected more than the _maximum_ number
+        of UTxO entries specified by the [Maximum Input
+        Count](#maximum-input-count) function.
 
- 3.  __Creates a /change value/__ for the output, equal to the total value
-     of the /final UTxO selection/ for that output minus the value /v/ of
+ 3.  **Creates a _change value_** for the output, equal to the total value
+     of the _final UTxO selection_ for that output minus the value _v_ of
      that output.
 
- 4.  __Updates the /accumulated coin selection/__:
+ 4.  **Updates the _accumulated coin selection_**:
 
-      * Adds the /output/ to 'outputs'.
-      * Adds the /improved UTxO selection/ to 'inputs'.
-      * Adds the /change value/ to 'change'.
+      * Adds the _output_ to 'outputs'.
+      * Adds the _improved UTxO selection_ to 'inputs'.
+      * Adds the _change value_ to 'change'.
 
-This phase ends when every output has been processed, __or__ when the
-/remaining UTxO set/ has been exhausted, whichever occurs sooner.
+This phase ends when every output has been processed, **or** when the
+_remaining UTxO set_ has been exhausted, whichever occurs sooner.
 
 ### Termination
 
