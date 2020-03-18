@@ -337,11 +337,11 @@ For each output of value **_v_**, the algorithm:
 
       * **Condition 1**: we have moved closer to the _ideal_ value:
 
-            abs (_ideal_ − _v1_) < abs (_ideal_ − _v0_)
+        abs (_ideal_ − _v1_) < abs (_ideal_ − _v0_)
 
       * **Condition 2**: we have not exceeded the _maximum_ value:
 
-            _v1_ ≤ _maximum_
+        _v1_ ≤ _maximum_
 
       * **Condition 3**: when counting cumulatively across all outputs
         considered so far, we have not selected more than the _maximum_ number
@@ -365,6 +365,6 @@ _remaining UTxO set_ has been exhausted, whichever occurs sooner.
 
 When both phases are complete, the algorithm terminates.
 
-The /accumulated coin selection/ and /remaining UTxO set/ are returned to
-the caller.
+The [accumulated coin selection](#accumulated-coin-selection) and [remaining
+UTxO set](#remaining-utxo-set) are returned to the caller.
 
