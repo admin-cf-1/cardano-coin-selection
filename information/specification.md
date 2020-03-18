@@ -181,30 +181,30 @@ There are several motivating principles behind the design of the algorithm.
 #### Principle 1: Dust Management
 
 The probability that random selection will choose dust entries from a UTxO
-set increases with the proportion of dust in the set.
+set _increases_ with the proportion of dust in the set.
 
 Therefore, for a UTxO set with a large amount of dust, there's a high
 probability that a random subset will include a large amount of dust.
 
-Over time, selecting entries randomly in this way will tend to limit amount of
-dust that accumulates in the UTxO set.
+Over time, selecting entries randomly in this way will tend to _limit_ the
+amount of dust that accumulates in the UTxO set.
 
 #### Principle 2: Change Management
 
 As mentioned in the [background](#background) section, coin selection
-algorithms should, over time, create a UTxO set that has useful outputs:
+algorithms should, over time, create a UTxO set that has _useful_ outputs:
 outputs that will allow us to process future payments with a minimum number of
 inputs.
 
 If for each payment request of value **v** we create a change output of
-*roughly* the same value **v**, then we will end up with a distribution of
+_roughly_ the same value **v**, then we will end up with a distribution of
 change values that matches the typical value distribution of payment
 requests.
 
 #### Principle 3: Performance Management
 
-Searching the UTxO set for additional entries to *improve* our change outputs
-is *only* useful if the UTxO set contains entries that are sufficiently
+Searching the UTxO set for additional entries to _improve_ our change outputs
+is _only_ useful if the UTxO set contains entries that are sufficiently
 small enough. But it is precisely when the UTxO set contains many small
 entries that it is less likely for a randomly-chosen UTxO entry to push the
 total above the upper bound.
