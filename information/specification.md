@@ -129,12 +129,12 @@ This section categorizes the various failure modes.
 This failure occurs when the total value of the entries within the [initial
 UTxO set](#initial-utxo-set) (the amount of money _available_) is _less than_
 the the total value of all entries in the [initial output
-list](#requested-output-list) (the amount of money _required).
+list](#requested-output-list) (the amount of money _required_).
 
 ### UTxO Not Fragmented Enough
 
 This failure occurs when the _number_ of entries in the [initial UTxO
-set](#initial-utxo-set) is /smaller than/ the number of entries in the
+set](#initial-utxo-set) is _smaller than_ the number of entries in the
 [requested output list](#requested-output-list).
 
 All algorithms require that there is _at least one_ UTxO entry available for
