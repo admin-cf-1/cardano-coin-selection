@@ -94,11 +94,41 @@ to have:
 
 # Algorithms
 
-This section will describe the primary algorithms used in Cardano Wallet.
+This section will describe, in detail, the algorithms used in Cardano Wallet.
 
--- TODO: Describe the overall type of the algorithm.
+## Common Interface
+
+In general, algorithms used for coin selection implement a common interface.
+
+This section will describe the parameters that are common to all coin selection
+algorithms described by this article, the results that they produce, and the
+failure modes that they have in common.
 
 ## Parameters
+
+* *initial UTxO set*.
+
+  This specifies
+
+  is initially equal to the given /initial UTxO set/ parameter,
+  sorted into /descending order of coin value/.
+
+  The /head/ of the list is always the remaining UTxO entry with the
+  /largest coin value/.
+
+  Entries are incrementally removed from the /head/ of the list as the
+  algorithm proceeds, until the list is empty.
+
+2.  An __/unpaid output list/__
+
+    This is initially equal to the given /output list/ parameter, sorted
+    into /descending order of coin value/.
+
+    The /head/ of the list is always the unpaid output with the
+    /largest coin value/.
+
+    Entries are incrementally removed from the /head/ of the list as the
+    algorithm proceeds, until the list is empty.
 
 ## Results
 
