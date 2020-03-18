@@ -4,15 +4,17 @@
 * [Background](#background)
   * [What is Coin Selection?](#what-is-coin-selection)
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
-* [Algorithms](#algorithms)
-  * [Common Interface](#common-interface)
-    * [Parameters](#parameters)
-    * [Results](#results)
-    * [Failure Modes](#failure-modes)
-  * [Implementations](#implementations)
-    * [Largest-First](#largest-first)
-    * [Random-Improve](#random-improve)
-      * [Motivating Principles](#motivating-principles)
+* [Common Interface](#common-interface)
+  * [Parameters](#parameters)
+  * [Results](#results)
+  * [Failure Modes](#failure-modes)
+* [Implementations](#implementations)
+  * [Largest-First](#largest-first)
+  * [Random-Improve](#random-improve)
+    * [Motivating Principles](#motivating-principles)
+      * [Dust Management](#dust-management)
+      * [Change Management](#change-management)
+      * [Performance Management](#performance-management)
 
 # Purpose
 
@@ -93,11 +95,7 @@ to have:
  * A coin selection algorithm should employ strategies to limit the
    amount of dust that accumulates in the UTxO set.
 
-# Algorithms
-
-This section will describe, in detail, the algorithms used in Cardano Wallet.
-
-## Common Interface
+# Common Interface
 
 In general, algorithms used for coin selection implement a common interface.
 
@@ -159,11 +157,11 @@ outputs in the [requested output list](#requested-output-list) exceeds the
 upper limit specified by the [maximum input count
 function](#maximum-input-count-function).
 
-## Implementations
+# Implementations
 
-### Largest-First
+## Largest-First
 
-### Random-Improve
+## Random-Improve
 
 The **Random-Improve** coin selection algorithm works in **two phases**.
 
@@ -176,11 +174,11 @@ In the second phase, the algorithm attempts to improve upon each of the UTxO
 selections made in the previous phase, by conservatively expanding the
 selection made for each output, in order to generate improved change values.
 
-#### Motivating Principles
+### Motivating Principles
 
 There are several motivating principles behind the design of the algorithm.
 
-##### Principle 1: Dust Management
+#### Dust Management
 
 The probability that random selection will choose dust entries from a UTxO
 set increases with the proportion of dust in the set.
@@ -191,7 +189,7 @@ probability that a random subset will include a large amount of dust.
 Over time, selecting entries randomly in this way will tend to limit amount of
 dust that accumulates in the UTxO set.
 
-##### Principle 2: Change Management
+#### Change Management
 
 As mentioned in the background section, coin selection algorithms should, over
 time, create a UTxO set that has useful outputs: outputs that will allow us to
@@ -202,7 +200,7 @@ If for each payment request of value **v** we create a change output of
 change values that matches the typical value distribution of payment
 requests.
 
-##### Principle 3: Performance Management
+#### Performance Management
 
 Searching the UTxO set for additional entries to *improve* our change outputs
 is *only* useful if the UTxO set contains entries that are sufficiently
