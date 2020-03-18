@@ -6,7 +6,7 @@
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
     * [Issues](#issues)
     * [Desirable Properties](#desirable-properties)
-* [Definitions](#definitions)
+* [Basic Definitions](#basic-definitions)
   * [Address](#address)
   * [Coin Amount](#coin-amount)
   * [Transaction Input](#transaction-input)
@@ -123,7 +123,7 @@ algorithm to have. These properties include the following:
  * A coin selection algorithm should employ strategies to limit the
    amount of _dust_ that accumulates in the UTxO set.
 
-# Definitions
+# Basic Definitions
 
 ## Address
 
