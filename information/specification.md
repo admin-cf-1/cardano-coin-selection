@@ -7,6 +7,11 @@
     * [Issues](#issues)
     * [Desirable Properties](#desirable-properties)
 * [Common Interface](#common-interface)
+  * [Types](#types)
+    * [Transaction Input](#transaction-input)
+    * [Transaction Output](#transaction-output)
+    * [UTxO Set](#utxo-set)
+    * [Coin Selection](#coin-selection)
   * [Parameters](#parameters)
     * [Initial UTxO Set](#initial-utxo-set)
     * [Requested Output List](#requested-output-list)
@@ -119,10 +124,29 @@ algorithm to have. These properties include the following:
 # Common Interface
 
 All coin selection algorithms described by this article implement a _common
-interface_, defined by a common set of parameters, standard result types, and
-a common set of failure modes.
+interface_.
 
 This section will describe this common interface.
+
+## Types
+
+### Address
+
+### Coin Amount
+
+A **coin amount** is a non-negative integer value that represents a number of
+[Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
+
+### Transaction Input
+
+### Transaction Output
+
+A **transaction output** is a pair of values, consisting of a
+[target address](#address) and a [coin amount](#coin-amount).
+
+### UTxO Set
+
+### Coin Selection
 
 ## Parameters
 
@@ -130,13 +154,12 @@ All coin selection algorithms accept a common set of parameters.
 
 ### _Initial UTxO Set_
 
-This corresponds to the UTxO set of a wallet, the set of unspent transaction
-outputs.
+This corresponds to the current [UTxO set](utxo-set) of a wallet, the set of
+unspent transaction outputs associated with that wallet.
 
 ### _Requested Output List_
 
-A list of requested outputs, where each output is a 2-tuple that consists of a
-_target address_ and an _amount_.
+A list of requested [transaction outputs](transaction-output).
 
 ### _Maximum Input Count Function_
 
