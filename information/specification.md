@@ -291,7 +291,7 @@ For each output of value **_v_**, the algorithm:
  1.  **Calculates a _target range_** for the total value of inputs used to
      pay for that output, defined by the triplet:
 
-     (/minimum/, /ideal/, /maximum/) = (/v/, /2v/, /3v/)
+     (_minimum_, _ideal_, _maximum_) = (_v_, 2_v_, 3_v_)
 
  2.  __Attempts to /improve/ upon the /existing UTxO selection/__ for that
      output, by repeatedly selecting additional entries at random from the
