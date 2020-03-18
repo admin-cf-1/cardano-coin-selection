@@ -192,8 +192,8 @@ The **Random-Improve** coin selection algorithm works in **two phases**.
 In the first phase, the algorithm iterates through each of the [requested
 outputs](#requested-output-list) in descending order of coin value, from
 largest to smallest. For each output, the algorithm repeatedly selects entries
-at **random** from the [initial UTxO set](#initial-utxo-set) until the total
-value of selected entries is enough to pay for that ouput.
+at **random** from the [initial UTxO set](#initial-utxo-set), until the _total
+value_ of selected entries is enough to pay for that ouput.
 
 In the second phase, the algorithm attempts to **improve** upon each of the
 UTxO selections made in the previous phase, by conservatively expanding the
@@ -234,34 +234,32 @@ small enough. But it is precisely when the UTxO set contains many small
 entries that it is less likely for a randomly-chosen UTxO entry to push the
 total above the upper bound.
 
+### State Maintained during Computation
+
+#### Remaining UTxO Set
+
+This is initially equal to the [initial UTxO set](#initial-utxo-set) parameter.
+
 ### Phases of Computation
 
 This section will describe the phases of the algorithm in detail.
 
 #### Phase 1: Random Selection
 
-In this phase, the algorithm iterates through each of the given outputs. For
-each output, the algorithm randomly selects UTxO entries until the total value
-of selected entries is enough to pay for the ouput.
+In this phase, the algorithm iterates through each of the [requested
+outputs](#requested-output-list) in descending order of coin value, from
+largest to smallest. For each output of value **v**, the algorithm repeatedly
+selects entries at **random** from the [remaining UTxO
+set](#remaining-utxo-set), until the _total value_ of selected entries is
+greater than or equal to **v**. The selected entries are then _associated with_
+that output, and removed from the [remaining UTxO set](#remaining-utxo-set).
 
-During this phase, the algorithm:
-
-  *  processes outputs in /descending order of coin value/.
-
-  *  maintains a /remaining UTxO set/, initially equal to the given
-     /UTxO set/ parameter.
-
-For each output of value __/v/__, the algorithm /randomly/ selects entries
-from the /remaining UTxO set/, until the total value of selected entries is
-greater than or equal to __/v/__. The selected entries are then associated
-with that output, and removed from the /remaining UTxO set/.
-
-This phase ends when every output has been associated with a selection of
+This phase ends when _every_ output has been associated with a selection of
 UTxO entries.
 
 However, if the remaining UTxO set is completely exhausted before all
 outputs can be processed, the algorithm terminates and falls back to the
-__Largest-First__ algorithm.
+[Largest-First](largest-first) algorithm.
 
 #### Phase 2: Improvement
 
