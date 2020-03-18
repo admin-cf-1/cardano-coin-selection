@@ -61,7 +61,7 @@ to be paid back to the wallet by creating one or more _change outputs_.
 
 ## Why is Coin Selection Non-Trivial?
 
-There are a number of issues which make the problem of coin selection more
+There are a number of **issues** which make the problem of coin selection more
 complicated than it would initially appear.
 
  * Each transaction has a _maximum size_, as defined by the protocol. The size
@@ -91,8 +91,8 @@ complicated than it would initially appear.
    widely considered to have negative privacy implications, the discussion of
    which is beyond the scope of this article.
 
-There are several properties that we would like a coin selection algorithm
-to have:
+There are several **desirable properties** that we would like a coin selection
+algorithm to have:
 
  * A coin selection algorithm should, over the course of time, aim to generate
    and maintain a UTxO set with "useful" outputs; that is, outputs that allow
