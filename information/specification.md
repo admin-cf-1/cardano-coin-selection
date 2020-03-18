@@ -248,7 +248,7 @@ coin value/.
 Entries are incrementally removed from the /head/ of the list as the algorithm
 proceeds, until the list is empty.
 
-#### Unpaid Ouput List
+#### Unpaid Output List
 
 This is initially equal to the given /output list/ parameter, sorted into
 /descending order of coin value/.
