@@ -138,7 +138,7 @@ _(definition of address)_
 
 ### Coin Amount
 
-A **coin amount** is a non-negative integer value that represents a number of
+A _coin amount_ is a non-negative integer value that represents a number of
 [Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
 
 ### Transaction Input
@@ -147,7 +147,7 @@ _(definition of transaction input)_
 
 ### Transaction Output
 
-A **transaction output** is a pair of values, consisting of a
+A _transaction output_ is a pair of values, consisting of a
 [target address](#address) and a [coin amount](#coin-amount).
 
 ### UTxO Set
