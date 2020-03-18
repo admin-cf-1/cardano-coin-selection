@@ -191,9 +191,9 @@ The **Random-Improve** coin selection algorithm works in **two phases**.
 
 In the first phase, the algorithm iterates through each of the [requested
 outputs](#requested-output-list) in descending order of coin value, from
-largest to smallest. For each output, the algorithm selects entries at
-**random** from the [initial UTxO set](#initial-utxo-set) until the total value
-of selected entries is enough to pay for that ouput.
+largest to smallest. For each output, the algorithm repeatedly selects entries
+at **random** from the [initial UTxO set](#initial-utxo-set) until the total
+value of selected entries is enough to pay for that ouput.
 
 In the second phase, the algorithm attempts to **improve** upon each of the
 UTxO selections made in the previous phase, by conservatively expanding the
@@ -216,10 +216,10 @@ amount of dust that accumulates in the UTxO set.
 
 #### Principle 2: Change Management
 
-As mentioned in the [background](#background) section, it is desirable that
-coin selection algorithms, over time, are able to create UTxO sets that have
-_useful_ outputs: outputs that will allow us to process future payments with a
-minimum number of inputs.
+As mentioned in the [Desirable Properties](#desirable-properties) section, it
+is desirable that coin selection algorithms, over time, are able to create UTxO
+sets that have _useful_ outputs: outputs that will allow us to process future
+payments with a minimum number of inputs.
 
 If for each payment request of value **v** we create a change output of
 _roughly_ the same value **v**, then we will end up with a distribution of
