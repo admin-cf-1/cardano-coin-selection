@@ -190,10 +190,10 @@ function](#maximum-input-count-function).
 The **Random-Improve** coin selection algorithm works in **two phases**.
 
 In the first phase, the algorithm iterates through each of the [requested
-outputs](#requested-output-list) in descending order of coin value. For each
-output, the algorithm selects entries at **random** from the [initial UTxO
-set](#initial-utxo-set) until the total value of selected entries is enough to
-pay for that ouput.
+outputs](#requested-output-list) in descending order of coin value, from
+largest to smallest. For each output, the algorithm selects entries at
+**random** from the [initial UTxO set](#initial-utxo-set) until the total value
+of selected entries is enough to pay for that ouput.
 
 In the second phase, the algorithm attempts to **improve** upon each of the
 UTxO selections made in the previous phase, by conservatively expanding the
