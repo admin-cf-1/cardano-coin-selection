@@ -2,8 +2,8 @@
 
 * [Purpose](#purpose)
 * [Background](#background)
-  * [What is Coin Selection](#what-is-coin-selection)
-  * [Why is Coin Selection Non-Trivial](#why-is-coin-selection-non-trivial)
+  * [What is Coin Selection?](#what-is-coin-selection)
+  * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
 * [Algorithms](#algorithms)
   * [Interface]()
     * [Parameters]()
