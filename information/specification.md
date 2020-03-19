@@ -186,8 +186,6 @@ It consists of three sets:
   * A set of _change values_, where each value is simply a
     [coin amount](#coin-amount).
 
-_(definition of coin selection)_
-
 # Common Interface
 
 All coin selection algorithms described by this article implement a _common
