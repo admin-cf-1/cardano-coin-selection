@@ -187,8 +187,9 @@ _function_ that, when applied to a standard set of parameters, will produce a
 result value of a standard type.
 
 This section defines the standard parameters accepted by coin selection
-algorithms used in Cardano Wallet, together with the standard results returned,
-and the set of error conditions that may occur.
+algorithms used in Cardano Wallet, together with the standard results returned.
+
+It also defines the set of error conditions that may occur.
 
 The terms _coin selection algorithm_ and _coin selection function_ will be used
 interchangeably in this section.
