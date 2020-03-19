@@ -248,23 +248,23 @@ A coin selection function produces _two_ result values:
     is equal to the _inputs_ field of the [coin selection](#coin-selection)
     result value.
 
-    More formally, the following laws hold:
+    Stated more formally, the following laws hold:
 
-      * **UTxO<sub>_final_</sub>** =
-        **UTxO<sub>_initial_</sub>** \ **UTxO<sub>_selected_</sub>**
+      * UTxO<sub>_final_</sub> =
+        UTxO<sub>_initial_</sub> \ UTxO<sub>_selected_</sub>
 
-      * **UTxO<sub>_initial_</sub>** =
-        **UTxO<sub>_final_</sub>** ⋃ **UTxO<sub>_selected_</sub>**
+      * UTxO<sub>_initial_</sub> =
+        UTxO<sub>_final_</sub> ⋃ UTxO<sub>_selected_</sub>
 
     Where:
 
       * **UTxO<sub>_initial_</sub>** is the [initial UTxO
-        set](#initial-utxo-set)
+        set](#initial-utxo-set).
 
-      * **UTxO<sub>_final_</sub>** is the [final UTxO set](#final-utxo-set)
+      * **UTxO<sub>_final_</sub>** is the [final UTxO set](#final-utxo-set).
 
       * **UTxO<sub>_selected_</sub>** is the value of the _inputs_ field of the
-        [coin selection)(#coin-selection) result value.
+        [coin selection](#coin-selection) result value.
 
 ## Failure Modes
 
