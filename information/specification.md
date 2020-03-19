@@ -296,8 +296,8 @@ There are a number of ways in which a coin selection algorithm can fail:
 
     This failure occurs if the _number_ of UTxO entries needed to pay for the
     outputs in the [requested output list](#requested-output-list) exceeds the
-    upper limit specified by the [maximum input count
-    function](#maximum-input-count-function).
+    upper limit specified by the [maximum input count](#maximum-input-count)
+    parameter.
 
 # Implementations
 
