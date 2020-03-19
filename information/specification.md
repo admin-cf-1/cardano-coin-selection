@@ -6,14 +6,14 @@
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
     * [Issues](#issues)
     * [Desirable Properties](#desirable-properties)
-* [Basic Definitions](#basic-definitions)
+* [Definitions](#definitions)
   * [Address](#address)
   * [Coin Amount](#coin-amount)
   * [Transaction Input](#transaction-input)
   * [Transaction Output](#transaction-output)
   * [UTxO Set](#utxo-set)
   * [Coin Selection](#coin-selection)
-* [Common Interface](#common-interface)
+* [Interface](#interface)
   * [Parameters](#parameters)
     * [Initial UTxO Set](#initial-utxo-set)
     * [Requested Output List](#requested-output-list)
@@ -171,12 +171,52 @@ A _transaction output_ is a pair of values (**_t_**, **_a_**), where:
   * **_t_** is a [target address](#address);
   * **_a_** is a [coin amount](#coin-amount).
 
+# Interface
+
+All coin selection algorithms used by Cardano Wallet implement a _common
+interface_.
+
+This section will describe that interface.
+
+At its heart, a coin selection algorithm is simply a pure mathematical
+_function_ that, when applied to a standard set of parameters, will produce a
+result value of a standard type.
+
+## Parameters
+
+A coin selection function accepts three parameters:
+
+### _Requested Output List_
+
+A list of payments to be made to recipient addresses, encoded as a list of
+[transaction outputs](transaction-output).
+
+### Initial UTxO Set
+
+A subset of a wallet's [UTxO set](#utxo-set).
+
+A coin selection algorithm will select entries from within this set in order
+to cover payments to recipients listed in the
+[requested output list](#requested-output-list).
+
+Normally, this parameter would be assigned to the complete [UTxO set](#utxo-set)
+of a wallet, equivalent to the total value associated with that wallet.
+
+### Maximum Input Count Function
+
+_(definition of maximum input count function)_
+
+## Results
+
+A coin selection function produces two result values:
+
+### Final UTxO Set
+
+_(definition of final UTxO set)_
+
 ### Coin Selection
 
-A _coin selection_ is a compound value that represents the _result_ of running
-a coin selection algorithm.
-
-It consists of three sets:
+A _coin selection_ consists of three sets:
 
   * A set of **_inputs_**, equivalent to a subset of the wallet's
     [UTxO set](#utxo-set).
@@ -192,44 +232,6 @@ It consists of three sets:
     [coin amount](#coin-amount).
 
     Represents the amount of change to be returned to the wallet.
-
-# Interface
-
-All coin selection algorithms used by Cardano Wallet implement a _common
-interface_.
-
-This section will describe that interface.
-
-At its heart, a coin selection algorithm is simply a pure mathematical
-_function_ that can be applied to a standard set of parameters, producing a
-result value of a standard type.
-
-## Parameters
-
-A coin selection function has three parameters:
-
-### _Initial UTxO Set_
-
-This corresponds to the current [UTxO set](utxo-set) of a wallet, the set of
-unspent transaction outputs associated with that wallet.
-
-### _Requested Output List_
-
-A list of requested [transaction outputs](transaction-output).
-
-### _Maximum Input Count Function_
-
-_(definition of maximum input count function)_
-
-## Results
-
-### _Final UTxO Set_
-
-_(definition of final UTxO set)_
-
-### _Final Coin Selection_
-
-_(definition of final coin selection)_
 
 ## Failure Modes
 
