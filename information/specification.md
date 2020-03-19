@@ -228,8 +228,8 @@ A coin selection function produces _two_ result values:
 
     A _coin selection_ is a compound record value with three fields:
 
-      * A set of **_inputs_**, equivalent to a subset of the wallet's
-        [UTxO set](#utxo-set).
+      * A set of **_inputs_**, equivalent to a subset of the
+        [initial UTxO set](#initial-utxo-set).
 
         Represents the value that has been selected from the wallet in order to
         cover the total payment value.
