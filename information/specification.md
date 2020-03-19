@@ -127,11 +127,11 @@ algorithm to have. These properties include:
 
 # Basic Definitions
 
-## Address
+### Address
 
 _(definition of address)_
 
-## Coin Amount
+### Coin Amount
 
 A _coin amount_ is a non-negative integer value that represents a number of
 [Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
@@ -139,16 +139,16 @@ A _coin amount_ is a non-negative integer value that represents a number of
 One [Ada](https://cardanodocs.com/cardano/monetary-policy/) is equal to exactly
 one million Lovelace.
 
-## Transaction Input
+### Transaction Input
 
 _(definition of transaction input)_
 
-## Transaction Output
+### Transaction Output
 
 A _transaction output_ is a pair of values, consisting of a
 [target address](#address) and a [coin amount](#coin-amount).
 
-## UTxO Set
+### UTxO Set
 
 A _UTxO set_ is a set of _pairs_, where each pair consists of a [transaction
 input](#transaction-input) and a [transaction output](#transaction-output).
@@ -156,7 +156,7 @@ input](#transaction-input) and a [transaction output](#transaction-output).
 A given [transaction input](#transaction-input) can only appear once in a given
 UTxO set.
 
-## Coin Selection
+### Coin Selection
 
 _(definition of coin selection)_
 
