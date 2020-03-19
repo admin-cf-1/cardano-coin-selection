@@ -129,7 +129,12 @@ algorithm to have. These properties include:
 
 ### Address
 
-_(definition of address)_
+An _address_ is a unique identifier that represents a destination for a payment.
+
+Addresses are owned (and generated) by individual wallets.
+
+Coin selection algorithms are, in general, agnostic to the details of
+individual address formats. Therefore, such formats will not be discussed here.
 
 ### Coin Amount
 
