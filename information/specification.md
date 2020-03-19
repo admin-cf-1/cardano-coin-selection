@@ -141,8 +141,8 @@ individual address formats. Therefore, such formats will not be discussed here.
 A _coin amount_ is a non-negative integer value that represents a number of
 [Lovelace](https://cardanodocs.com/cardano/monetary-policy/).
 
-One [Ada](https://cardanodocs.com/cardano/monetary-policy/) is equal to exactly
-one million Lovelace.
+One [Ada](https://cardanodocs.com/cardano/monetary-policy/) is _exactly_ equal
+to one million Lovelace.
 
 ### Transaction Input
 
