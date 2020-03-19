@@ -333,10 +333,10 @@ produce a result, Cardano Wallet will fall back to the
 ## Largest-First
 
 The **Largest-First** coin selection algorithm processes
-[outputs](#requested-output-list) in _descending order of coin value, from
+[outputs](#requested-output-list) in _descending order of coin value_, from
 _largest_ to _smallest_.
 
-For each output, it repeatedly selects the /largest/ remaining unspent UTxO
+For each output, it repeatedly selects the _largest remaining_ unspent UTxO
 entry until the value of selected entries is greater than or equal to the
 value of that output.
 
