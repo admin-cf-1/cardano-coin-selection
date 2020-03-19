@@ -456,7 +456,7 @@ In the _second_ phase, the algorithm attempts to **improve** upon each of the
 UTxO selections made in the previous phase, by conservatively expanding the
 selection made for each output, in order to generate improved change values.
 
-The name of the algorithm is taken from this two-phase process of selecting
+The name of the algorithm is taken from the two-phase process of selecting
 UTxO entries at **random**, and then attempting to **improve** upon the
 selections.
 
