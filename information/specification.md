@@ -288,8 +288,8 @@ All algorithms require that:
     [initial UTxO set](#initial-utxo-set).
 
  2. Each entry from the [initial UTxO set](#initial-utxo-set) is used to pay
-    for _at most one_ output from the [requested output list](#requested-output
-    list).
+    for _at most one_ output from the [requested output
+    list](#requested-output-list).
 
 ## Failure Modes
 
