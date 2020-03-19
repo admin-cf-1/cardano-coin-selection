@@ -26,7 +26,8 @@
     * [Maximum Input Count](#maximum-input-count)
   * [Results](#results)
     * [Final UTxO Set](#final-utxo-set)
-    * [Final Coin Selection](#final-coin-selection)
+    * [Coin Selection](#coin-selection)
+  * [Cardinality Rules](#cardinality-rules)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
     * [UTxO Not Fragmented Enough](#utxo-not-fragmented-enough)
@@ -278,6 +279,18 @@ A coin selection function produces _two_ result values:
       * **UTxO<sub>_selected_</sub>** is the value of the _inputs_ field of the
         [coin selection](#coin-selection) result value.
 
+## Cardinality Rules
+
+All algorithms require that:
+
+ 1. Each output from the [requested output list](#requested-output-list) is
+    paid for by _one or more_ entries from the
+    [initial UTxO set](#initial-utxo-set).
+
+ 2. Each entry from the [initial UTxO set](#initial-utxo-set) is used to pay
+    for _at most one_ output from the [requested output list](#requested-output
+    list).
+
 ## Failure Modes
 
 There are a number of ways in which a coin selection algorithm can fail:
@@ -373,18 +386,6 @@ At all stages of processing, the algorithm maintains three pieces of state:
 
     Entries are incrementally added as each output is paid for, until the
     [unpaid output list](#unpaid-output-list) is empty.
-
-### Cardinality Rules
-
-The algorithm requires that:
-
- 1.  Each output from the given /output list/ is paid for by /one or more/
-     entries from the /initial UTxO set/.
-
- 2.  Each entry from the /initial UTxO set/ is used to pay for /at most one/
-     output from the given /output list/.
-
-     (A single UTxO entry __cannot__ be used to pay for multiple outputs.)
 
 ### Order of Processing
 
