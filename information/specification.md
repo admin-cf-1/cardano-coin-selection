@@ -153,7 +153,7 @@ A _transaction input_ is a pair of values (**_h_**, **_i_**), where:
 
 ### Transaction Output
 
-A _transaction output_ is a pair of values (**_t_**), **_a_**), where:
+A _transaction output_ is a pair of values (**_t_**, **_a_**), where:
 
  * **_t_** is a [target address](#address);
  * **_a_** is a [coin amount](#coin-amount).
