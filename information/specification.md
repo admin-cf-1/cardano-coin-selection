@@ -500,8 +500,7 @@ state:
 
  1. #### Remaining UTxO Set
 
-    This is initially equal to the [initial UTxO set](#initial-utxo-set)
-    parameter.
+    This is initially equal to the [initial UTxO set](#initial-utxo-set).
 
  2. #### Accumulated Coin Selection
 
@@ -550,10 +549,10 @@ For each output of value **_v_**, the algorithm:
 
      (_minimum_, _ideal_, _maximum_) = (_v_, _2v_, _2v_)
 
- 2.  **Attempts to _improve_ upon the _existing UTxO selection_** for that
-     output, by repeatedly selecting additional entries at random from the
-     [remaining UTxO set](#remaining-utxo-set), stopping when the selection can
-     be improved upon no further.
+ 2.  **Attempts to improve upon the existing UTxO selection** for that output,
+     by repeatedly selecting additional entries at random from the [remaining
+     UTxO set](#remaining-utxo-set), stopping when the selection can be
+     improved upon no further.
 
      A selection with value _v1_ is considered to be an _improvement_ over a
      selection with value _v0_ if **all** of the following conditions are
@@ -569,21 +568,22 @@ For each output of value **_v_**, the algorithm:
 
       * **Condition 3**: when counting cumulatively across all outputs
         considered so far, we have not selected more than the _maximum_ number
-        of UTxO entries specified by the [Maximum Input
-        Count](#maximum-input-count) function.
+        of UTxO entries specified by [Maximum Input
+        Count](#maximum-input-count).
 
  3.  **Creates a _change value_** for the output, equal to the total value
      of the _final UTxO selection_ for that output minus the value _v_ of
      that output.
 
- 4.  **Updates the _accumulated coin selection_**:
+ 4.  **Updates the [accumulated coin selection](#accumulated-coin-selection)**:
 
-      * Adds the _output_ to 'outputs'.
-      * Adds the _improved UTxO selection_ to 'inputs'.
-      * Adds the _change value_ to 'change'.
+      * Adds the _output_ to the _outputs_ field;
+      * Adds the _improved UTxO selection_ to the _inputs_ field;
+      * Adds the _change value_ to the _change values_ field.
 
 This phase ends when every output has been processed, **or** when the
-_remaining UTxO set_ has been exhausted, whichever occurs sooner.
+[remaining UTxO set](#remaining-utxo-set) has been exhausted, whichever occurs
+sooner.
 
 ### Termination
 
