@@ -116,7 +116,7 @@ complicated than it would initially appear.
 ### Desirable Properties
 
 There are several desirable properties that we would like a coin selection
-algorithm to have. These properties include the following:
+algorithm to have. These properties include:
 
  * A coin selection algorithm should, over the course of time, aim to generate
    and maintain a UTxO set with _useful_ outputs: that is, outputs that allow
