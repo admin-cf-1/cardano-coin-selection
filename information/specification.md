@@ -227,7 +227,7 @@ A coin selection function produces _two_ result values:
 
  1. #### Coin Selection
 
-    A _coin selection_ is a compound record value with three fields:
+    A _coin selection_ is a record with three fields:
 
       * A set of **_inputs_**, equivalent to a subset of the
         [initial UTxO set](#initial-utxo-set).
