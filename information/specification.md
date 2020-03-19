@@ -353,6 +353,9 @@ For each output, it repeatedly selects the _largest remaining_ unspent UTxO
 entry until the value of selected entries is greater than or equal to the
 value of that output.
 
+The name of the algorithm is taken from the idea that the **largest** UTxO
+entry is always considered **first**.
+
 ### State Maintained by the Algorithm
 
 At all stages of processing, the algorithm maintains three pieces of state:
