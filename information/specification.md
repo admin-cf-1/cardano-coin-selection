@@ -102,15 +102,16 @@ complicated than it would initially appear.
 
  * The most obvious strategy for paying change, which consists of making a
    single change output with the exact excess value, will tend (over time) to
-   reduce the size of the UTxO set. This is bad for two reasons.
+   reduce the size of the UTxO set. This is bad for two reasons:
 
-   Firstly, having a small UTxO set limits the number of payments that we can
-   make in parallel. Since a single UTxO entry can only be used to pay for a
-   single output, we need at least as many UTxO entries as there are outputs.
+    1. Having a small UTxO set limits the number of payments that we can make
+       in parallel. Since a single UTxO entry can only be used to pay for a
+       single output, we need at least as many UTxO entries as there are
+       outputs.
 
-   Secondly, the approach of coalescing all change into a single output is
-   widely considered to have negative privacy implications, the discussion of
-   which is beyond the scope of this article.
+    2. The approach of coalescing all change into a single output is widely
+       considered to have negative privacy implications. The discussion of
+       privacy issues is beyond the scope of this article.
 
 ### Desirable Properties
 
