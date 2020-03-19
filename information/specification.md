@@ -388,6 +388,8 @@ state:
 
     The accumulated [coin selection](#coin-selection) is initially _empty_.
 
+    TODO: Consider removing this section.
+
 ### Order of Processing
 
 The algorithm proceeds according to the following sequence of steps:
@@ -505,6 +507,8 @@ state:
  2. #### Accumulated Coin Selection
 
     The accumulated [coin selection](#coin-selection) is initially _empty_.
+
+    TODO: Consider removing this section.
 
 ### Phases of Computation
 
