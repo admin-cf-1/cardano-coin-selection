@@ -180,10 +180,10 @@ a coin selection algorithm.
 
 It consists of three sets:
 
-  * A set of _inputs_, where each _input_ is a [UTxO entry](#utxo-entry);
-  * A set of _outputs_, where each _output_ is a
-    [transaction output](#transaction-output);
-  * A set of _change outputs_, where each _change output_ is a
+  * A set of _inputs_, equivalent to a subset of the wallet's
+    [UTxO set](#utxo-set).
+  * A set of _outputs_ (see [transaction output](#transaction-output)).
+  * A set of _change values_, where each value is simply a
     [coin amount](#coin-amount).
 
 _(definition of coin selection)_
