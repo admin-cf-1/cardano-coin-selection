@@ -301,6 +301,21 @@ There are a number of ways in which a coin selection algorithm can fail:
 
 # Implementations
 
+This section will describe the coin selection algorithms used by Cardano Wallet.
+
+These algorithms implement a [common interface](#interface), as described
+above.
+
+There are two main algorithms:
+
+  * [Largest-First](#largest-first)
+  * [Random-Improve](#random-improve)
+
+In general, Cardano Wallet gives priority to the
+[Random-Improve](#random-improve) algorithm, but falls back to the
+[Largest-First](#largest-first) algorithm in the case that the former algorithm
+is unable to produce a result.
+
 ## Largest-First
 
 The **Largest-First** coin selection algorithm processes
