@@ -346,32 +346,33 @@ At all stages of processing, the algorithm maintains three pieces of state:
 
  1. #### Remaining UTxO List
 
-    This is initially equal to the given /initial UTxO set/ parameter, sorted
-    into /descending order of coin value/.
+    This is initially equal to the [initial UTxO set](#initial-utxo-set),
+    sorted into _descending order of coin value_.
 
-    The /head/ of the list is always the remaining UTxO entry with the /largest
-    coin value/.
+    The _head_ of the list is always the remaining UTxO entry with the _largest
+    coin value_.
 
-    Entries are incrementally removed from the /head/ of the list as the
+    Entries are incrementally removed from the _head_ of the list as the
     algorithm proceeds, until the list is empty.
 
  2. #### Unpaid Output List
 
-    This is initially equal to the given /output list/ parameter, sorted into
-    /descending order of coin value/.
+    This is initially equal to the [requested output
+    list](#requested-output-list), sorted into _descending order of coin
+    value_.
 
-    The /head/ of the list is always the unpaid output with the /largest coin
-    value/.
+    The _head_ of the list is always the unpaid output with the _largest coin
+    value_.
 
-    Entries are incrementally removed from the /head/ of the list as the
+    Entries are incrementally removed from the _head_ of the list as the
     algorithm proceeds, until the list is empty.
 
  3. #### Accumulated Coin Selection
 
-    This is initially /empty/.
+    The [accumulated coin selection](#coin-selection) is initially _empty_.
 
     Entries are incrementally added as each output is paid for, until the
-    /unpaid output list/ is empty.
+    _unpaid output list_ is empty.
 
 ### Cardinality Rules
 
