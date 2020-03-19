@@ -342,37 +342,36 @@ value of that output.
 
 ### State Maintained by the Algorithm
 
-This section describes state maintained by the algorithm at all stages of
-processing.
+At all stages of processing, the algorithm maintains three pieces of state:
 
-####  Remaining UTxO List
+ 1. #### Remaining UTxO List
 
-This is initially equal to the given /initial UTxO set/ parameter, sorted into
-/descending order of coin value/.
+    This is initially equal to the given /initial UTxO set/ parameter, sorted
+    into /descending order of coin value/.
 
-The /head/ of the list is always the remaining UTxO entry with the /largest
-coin value/.
+    The /head/ of the list is always the remaining UTxO entry with the /largest
+    coin value/.
 
-Entries are incrementally removed from the /head/ of the list as the algorithm
-proceeds, until the list is empty.
+    Entries are incrementally removed from the /head/ of the list as the
+    algorithm proceeds, until the list is empty.
 
-#### Unpaid Output List
+ 2. #### Unpaid Output List
 
-This is initially equal to the given /output list/ parameter, sorted into
-/descending order of coin value/.
+    This is initially equal to the given /output list/ parameter, sorted into
+    /descending order of coin value/.
 
-The /head/ of the list is always the unpaid output with the /largest coin
-value/.
+    The /head/ of the list is always the unpaid output with the /largest coin
+    value/.
 
-Entries are incrementally removed from the /head/ of the list as the algorithm
-proceeds, until the list is empty.
+    Entries are incrementally removed from the /head/ of the list as the
+    algorithm proceeds, until the list is empty.
 
-#### Accumulated Coin Selection
+ 3. #### Accumulated Coin Selection
 
-This is initially /empty/.
+    This is initially /empty/.
 
-Entries are incrementally added as each output is paid for, until the
-/unpaid output list/ is empty.
+    Entries are incrementally added as each output is paid for, until the
+    /unpaid output list/ is empty.
 
 ### Cardinality Rules
 
