@@ -182,6 +182,9 @@ At its heart, a coin selection algorithm is simply a pure mathematical
 _function_ that when applied to a standard set of parameters, will produce a
 result value of a standard type.
 
+In this section, the terms _coin selection algorithm_ and _coin selection
+function_ will be used interchangeably.
+
 ## Parameters
 
 A coin selection function accepts three parameters:
