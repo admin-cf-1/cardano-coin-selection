@@ -125,7 +125,7 @@ algorithm to have. These properties include:
  * A coin selection algorithm should employ strategies to limit the
    amount of _dust_ that accumulates in the UTxO set.
 
-# Basic Definitions
+# Definitions
 
 ### Address
 
@@ -179,17 +179,17 @@ interface_.
 This section will describe that interface.
 
 At its heart, a coin selection algorithm is simply a pure mathematical
-_function_ that, when applied to a standard set of parameters, will produce a
+_function_ that when applied to a standard set of parameters, will produce a
 result value of a standard type.
 
 ## Parameters
 
 A coin selection function accepts three parameters:
 
-  * #### Requested Output List
+### Requested Output List
 
-    A list of payments to be made to recipient addresses, encoded as a list of
-    [transaction outputs](transaction-output).
+A list of payments to be made to recipient addresses, encoded as a list of
+[transaction outputs](transaction-output).
 
 ### Initial UTxO Set
 
@@ -200,7 +200,8 @@ to cover payments to recipients listed in the
 [requested output list](#requested-output-list).
 
 Normally, this parameter would be assigned to the complete [UTxO set](#utxo-set)
-of a wallet, equivalent to the total value associated with that wallet.
+of a wallet, giving the coin selection algorithm access to the total value
+associated with that wallet.
 
 ### Maximum Input Count Function
 
