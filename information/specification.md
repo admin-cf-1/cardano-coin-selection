@@ -160,8 +160,8 @@ A _transaction output_ is a pair of values (**_t_**, **_a_**), where:
 
 ### UTxO Set
 
-A _UTxO set_ represents the unspent value associated with a wallet, and
-consists of a set of [UTxO entries](#utxo-entry).
+A _UTxO set_ is a set of [UTxO entries](#utxo-entry), and represents the
+unspent value associated with a wallet.
 
 A given [transaction input](#transaction-input) can only appear _once_ in a
 given UTxO set.
