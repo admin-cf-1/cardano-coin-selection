@@ -248,7 +248,7 @@ A coin selection function produces _two_ result values:
     is equal to the _inputs_ field of the [coin selection](#coin-selection)
     result value.
 
-    More formally: **U<sub>i</sub>**
+    More formally: **U<sub>_f_</sub>** = **U<sub>_i_</sub>** \ **U<sub>_s_</sub>**
 
 ## Failure Modes
 
