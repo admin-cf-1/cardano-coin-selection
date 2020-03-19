@@ -187,7 +187,7 @@ function_ will be used interchangeably.
 
 ## Parameters
 
-A coin selection function accepts three parameters:
+A coin selection function accepts _three_ parameters:
 
  1. #### Requested Output List
 
@@ -214,65 +214,63 @@ A coin selection function accepts three parameters:
 
 ## Results
 
-A coin selection function produces two result values:
+A coin selection function produces _two_ result values:
 
-### Final UTxO Set
+ 1. #### Final UTxO Set
 
-_(definition of final UTxO set)_
+    _(definition of final UTxO set)_
 
-### Coin Selection
+ 2. #### Coin Selection
 
-A _coin selection_ consists of three sets:
+    A _coin selection_ consists of three sets:
 
-  * A set of **_inputs_**, equivalent to a subset of the wallet's
-    [UTxO set](#utxo-set).
+      * A set of **_inputs_**, equivalent to a subset of the wallet's
+        [UTxO set](#utxo-set).
 
-    Represents the value that has been selected from the wallet in order to
-    cover the total payment value.
+        Represents the value that has been selected from the wallet in order to
+        cover the total payment value.
 
-  * A set of **_outputs_** (see [transaction output](#transaction-output)).
+      * A set of **_outputs_** (see [transaction output](#transaction-output)).
 
-    Represents the set of payments to be made to recipient addresses.
+        Represents the set of payments to be made to recipient addresses.
 
-  * A set of **_change values_**, where each change value is simply a
-    [coin amount](#coin-amount).
+      * A set of **_change values_**, where each change value is simply a
+        [coin amount](#coin-amount).
 
-    Represents the amount of change to be returned to the wallet.
+        Represents the amount of change to be returned to the wallet.
 
 ## Failure Modes
 
-There are a number of ways in which a coin selection algorithm can fail.
+There are a number of ways in which a coin selection algorithm can fail:
 
-This section categorizes the various failure modes.
+  * #### UTxO Balance Insufficient
 
-### UTxO Balance Insufficient
+    This failure occurs when the total value of the entries within the [initial
+    UTxO set](#initial-utxo-set) (the amount of money _available_) is _less
+    than_ the the total value of all entries in the [initial output
+    list](#requested-output-list) (the amount of money _required_).
 
-This failure occurs when the total value of the entries within the [initial
-UTxO set](#initial-utxo-set) (the amount of money _available_) is _less than_
-the the total value of all entries in the [initial output
-list](#requested-output-list) (the amount of money _required_).
+  * #### UTxO Not Fragmented Enough
 
-### UTxO Not Fragmented Enough
+    This failure occurs when the _number_ of entries in the [initial UTxO
+    set](#initial-utxo-set) is _smaller than_ the number of entries in the
+    [requested output list](#requested-output-list).
 
-This failure occurs when the _number_ of entries in the [initial UTxO
-set](#initial-utxo-set) is _smaller than_ the number of entries in the
-[requested output list](#requested-output-list).
+    All algorithms require that there is _at least one_ UTxO entry available
+    _for each_ output.
 
-All algorithms require that there is _at least one_ UTxO entry available _for
-each_ output.
+  * #### UTxO Fully Depleted
 
-### UTxO Fully Depleted
+    This failure occurs if the algorithm depletes all entries from the [initial
+    UTxO set](#initial-utxo-set) _before_ it is able to pay for all outputs in
+    the [requested output list](#requested-output-list).
 
-This failure occurs if the algorithm depletes all entries from the [initial
-UTxO set](#initial-utxo-set) _before_ it is able to pay for all outputs in the
-[requested output list](#requested-output-list).
+  * #### Maximum Input Count Exceeded
 
-### Maximum Input Count Exceeded
-
-This failure occurs if the _number_ of UTxO entries needed to pay for the
-outputs in the [requested output list](#requested-output-list) exceeds the
-upper limit specified by the [maximum input count
-function](#maximum-input-count-function).
+    This failure occurs if the _number_ of UTxO entries needed to pay for the
+    outputs in the [requested output list](#requested-output-list) exceeds the
+    upper limit specified by the [maximum input count
+    function](#maximum-input-count-function).
 
 # Implementations
 
