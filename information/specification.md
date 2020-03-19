@@ -372,7 +372,7 @@ At all stages of processing, the algorithm maintains three pieces of state:
     The [accumulated coin selection](#coin-selection) is initially _empty_.
 
     Entries are incrementally added as each output is paid for, until the
-    _unpaid output list_ is empty.
+    [unpaid output list](#unpaid-output-list) is empty.
 
 ### Cardinality Rules
 
