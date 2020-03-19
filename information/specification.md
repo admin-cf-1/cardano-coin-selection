@@ -186,7 +186,7 @@ result value of a standard type.
 
 A coin selection function accepts three parameters:
 
-### Requested Output List
+* ### Requested Output List
 
 A list of payments to be made to recipient addresses, encoded as a list of
 [transaction outputs](transaction-output).
