@@ -1,3 +1,7 @@
+**This document is a work in progress!**
+
+**Sections may be rearranged, inserted, or removed without notice.**
+
 # Contents
 
 * [Purpose](#purpose)
