@@ -358,7 +358,8 @@ entry is always considered **first**.
 
 ### State Maintained by the Algorithm
 
-At all stages of processing, the algorithm maintains three pieces of state:
+At all stages of processing, the algorithm maintains the following pieces of
+state:
 
  1. #### Remaining UTxO List
 
@@ -494,7 +495,8 @@ total above the upper bound.
 
 ### State Maintained by the Algorithm
 
-At all stages of processing, the algorithm maintains two pieces of state:
+At all stages of processing, the algorithm maintains the following pieces of
+state:
 
  1. #### Remaining UTxO Set
 
