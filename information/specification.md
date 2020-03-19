@@ -437,7 +437,7 @@ The [accumulated coin selection](#accumulated-coin-selection) is returned
 to the caller as the [final coin selection](#coin-selection) result.
 
 The [remaining UTxO list](#remaining-utxo-list) is returned to the caller
-as the [final UTxO list](#final-utxo-list) result.
+as the [final UTxO set](#final-utxo-set) result.
 
 ## Random-Improve
 
