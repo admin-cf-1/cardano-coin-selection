@@ -237,9 +237,10 @@ A coin selection function produces _two_ result values:
 
  1. #### Final UTxO Set
 
-    The _final UTxO set_ is the subset of the [initial UTxO
-    set](#initial-utxo-set) that remains after values have been removed to pay
-    for entries in the [requested output list](#requested-output-list).
+    The _final UTxO set_ is a subset of the [initial UTxO
+    set](#initial-utxo-set). It represents the set that remains after values
+    have been removed to pay for entries in the [requested output
+    list](#requested-output-list).
 
     The set difference between the _final UTxO set_ and the _initial UTxO set_
     is equal to the _inputs_ field of the [coin selection](#coin-selection)
