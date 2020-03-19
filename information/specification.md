@@ -192,7 +192,7 @@ A coin selection function accepts three parameters:
  1. #### Requested Output List
 
     A list of payments to be made to recipient addresses, encoded as a list of
-    [transaction outputs](transaction-output).
+    [transaction outputs](#transaction-output).
 
  2. #### Initial UTxO Set
 
