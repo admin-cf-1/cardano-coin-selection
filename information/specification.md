@@ -150,7 +150,11 @@ A _transaction output_ is a pair of values, consisting of a
 
 ## UTxO Set
 
-_(definition of UTxO set)_
+A _UTxO set_ is a set of _pairs_, where each pair consists of a [transaction
+input](#transaction-input) and a [transaction output](#transaction-output).
+
+A given [transaction input](#transaction-input) can only appear once in a given
+UTxO set.
 
 ## Coin Selection
 
