@@ -253,8 +253,8 @@ A coin selection function produces _two_ result values:
     algorithm has removed values to pay for entries in the [requested output
     list](#requested-output-list).
 
-    If a coin selection algorithm is applied to the complete UTxO set of a
-    wallet, then the final UTxO set represents the updated UTxO set of the
+    If a coin selection algorithm is applied to the _complete_ UTxO set of a
+    wallet, then the final UTxO set represents the _updated_ UTxO set of the
     wallet.
 
     The set difference between the _final UTxO set_ and the _initial UTxO set_
