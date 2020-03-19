@@ -195,8 +195,8 @@ A coin selection function accepts three parameters:
 
     A subset of a wallet's [UTxO set](#utxo-set).
 
-    A coin selection algorithm will select entries from within this set in order
-    to cover payments listed in the [requested output
+    The coin selection algorithm will select entries from within this set in
+    order to cover payments listed in the [requested output
     list](#requested-output-list).
 
     Normally, this parameter would be assigned with the complete [UTxO
