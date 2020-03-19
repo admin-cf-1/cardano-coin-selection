@@ -193,16 +193,20 @@ It consists of three sets:
 
     Represents the amount of change to be returned to the wallet.
 
-# Common Interface
+# Interface
 
-All coin selection algorithms described by this article implement a _common
+All coin selection algorithms used by Cardano Wallet implement a _common
 interface_.
 
-This section will describe this common interface.
+This section will describe that interface.
+
+At its heart, a coin selection algorithm is simply a pure mathematical
+_function_ that can be applied to a standard set of parameters, producing a
+result value of a standard type.
 
 ## Parameters
 
-All coin selection algorithms accept a common set of parameters.
+A coin selection function has three parameters:
 
 ### _Initial UTxO Set_
 
