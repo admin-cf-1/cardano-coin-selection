@@ -369,7 +369,7 @@ At all stages of processing, the algorithm maintains three pieces of state:
 
  3. #### Accumulated Coin Selection
 
-    The [accumulated coin selection](#coin-selection) is initially _empty_.
+    The accumulated [coin selection](#coin-selection) is initially _empty_.
 
     Entries are incrementally added as each output is paid for, until the
     [unpaid output list](#unpaid-output-list) is empty.
