@@ -17,7 +17,7 @@
   * [Parameters](#parameters)
     * [Initial UTxO Set](#initial-utxo-set)
     * [Requested Output List](#requested-output-list)
-    * [Maximum Input Count Function](#maximum-input-count-function)
+    * [Maximum Input Count](#maximum-input-count)
   * [Results](#results)
     * [Final UTxO Set](#final-utxo-set)
     * [Final Coin Selection](#final-coin-selection)
@@ -199,13 +199,15 @@ A coin selection algorithm will select entries from within this set in order
 to cover payments to recipients listed in the
 [requested output list](#requested-output-list).
 
-Normally, this parameter would be assigned to the complete [UTxO set](#utxo-set)
-of a wallet, giving the coin selection algorithm access to the total value
-associated with that wallet.
+Normally, this parameter would be assigned with the complete [UTxO
+set](#utxo-set) of a wallet, giving the coin selection algorithm access to the
+total value associated with that wallet.
 
-### Maximum Input Count Function
+### Maximum Input Count
 
-_(definition of maximum input count function)_
+An _upper bound_ on the number of UTxO entries that the coin selection
+algorithm is permitted to select from the [initial UTxO
+set](#initial-utxo-set).
 
 ## Results
 
