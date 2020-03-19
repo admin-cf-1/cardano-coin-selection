@@ -203,7 +203,7 @@ A coin selection function accepts three parameters:
     set](#utxo-set) of a wallet, giving the coin selection algorithm access to
     the total value associated with that wallet.
 
- 3. ### Maximum Input Count
+ 3. #### Maximum Input Count
 
     An _upper bound_ on the number of UTxO entries that the coin selection
     algorithm is permitted to select from the [initial UTxO
