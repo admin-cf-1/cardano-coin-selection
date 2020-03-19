@@ -146,7 +146,7 @@ to one million Lovelace.
 
 ### Transaction Input
 
-A _transaction input_ is a pair of values (**_h_**, **_i_**), where:
+A _transaction input_ is a pair of values (**_h_**, **_i_** ), where:
 
  * **_h_** is the hash of an existing transaction **_t_**;
  * **_i_** is a non-negative integer index into the output list of **_t_**.
