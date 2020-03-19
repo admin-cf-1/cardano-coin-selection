@@ -216,13 +216,9 @@ A coin selection function accepts _three_ parameters:
 
 A coin selection function produces _two_ result values:
 
- 1. #### Final UTxO Set
+ 1. #### Coin Selection
 
-    _(definition of final UTxO set)_
-
- 2. #### Coin Selection
-
-    A _coin selection_ consists of three sets:
+    A _coin selection_ is a compound value that consists of three sets:
 
       * A set of **_inputs_**, equivalent to a subset of the wallet's
         [UTxO set](#utxo-set).
@@ -238,6 +234,20 @@ A coin selection function produces _two_ result values:
         [coin amount](#coin-amount).
 
         Represents the change to be returned to the wallet.
+
+ 1. #### Final UTxO Set
+
+    The final UTxO set **U_f_** is a subset of the [initial UTxO set](#initial-utxo-set).
+
+    The
+
+    The set difference between the [initial UTxO set](#initial-utxo-set) and the
+    final UTxO set corresponds to the values that the
+
+    the final UTxO set are precisely the values that the coin selection algorithm
+    has chosen to pay for
+
+    UTxO set that is left over
 
 ## Failure Modes
 
