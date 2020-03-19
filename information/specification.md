@@ -186,28 +186,28 @@ result value of a standard type.
 
 A coin selection function accepts three parameters:
 
-### Requested Output List
+ 1. #### Requested Output List
 
-A list of payments to be made to recipient addresses, encoded as a list of
-[transaction outputs](transaction-output).
+    A list of payments to be made to recipient addresses, encoded as a list of
+    [transaction outputs](transaction-output).
 
-### Initial UTxO Set
+ 2. #### Initial UTxO Set
 
-A subset of a wallet's [UTxO set](#utxo-set).
+    A subset of a wallet's [UTxO set](#utxo-set).
 
-A coin selection algorithm will select entries from within this set in order
-to cover payments to recipients listed in the
-[requested output list](#requested-output-list).
+    A coin selection algorithm will select entries from within this set in order
+    to cover payments to recipients listed in the
+    [requested output list](#requested-output-list).
 
-Normally, this parameter would be assigned with the complete [UTxO
-set](#utxo-set) of a wallet, giving the coin selection algorithm access to the
-total value associated with that wallet.
+    Normally, this parameter would be assigned with the complete [UTxO
+    set](#utxo-set) of a wallet, giving the coin selection algorithm access to
+    the total value associated with that wallet.
 
-### Maximum Input Count
+ 3. ### Maximum Input Count
 
-An _upper bound_ on the number of UTxO entries that the coin selection
-algorithm is permitted to select from the [initial UTxO
-set](#initial-utxo-set).
+    An _upper bound_ on the number of UTxO entries that the coin selection
+    algorithm is permitted to select from the [initial UTxO
+    set](#initial-utxo-set).
 
 ## Results
 
