@@ -218,7 +218,7 @@ A coin selection function produces _two_ result values:
 
  1. #### Coin Selection
 
-    A _coin selection_ is a compound value that consists of three sets:
+    A _coin selection_ is a compound record value with three fields:
 
       * A set of **_inputs_**, equivalent to a subset of the wallet's
         [UTxO set](#utxo-set).
@@ -237,17 +237,13 @@ A coin selection function produces _two_ result values:
 
  1. #### Final UTxO Set
 
-    The final UTxO set **U_f_** is a subset of the [initial UTxO set](#initial-utxo-set).
+    The _final UTxO set_ is the subset of the [initial UTxO
+    set](#initial-utxo-set) that remains after values have been removed to pay
+    for entries in the [requested output list](#requested-output-list).
 
-    The
-
-    The set difference between the [initial UTxO set](#initial-utxo-set) and the
-    final UTxO set corresponds to the values that the
-
-    the final UTxO set are precisely the values that the coin selection algorithm
-    has chosen to pay for
-
-    UTxO set that is left over
+    The set difference between the _final UTxO set_ and the _initial UTxO set_
+    is equal to the _inputs_ field of the [coin selection](#coin-selection)
+    result value.
 
 ## Failure Modes
 
