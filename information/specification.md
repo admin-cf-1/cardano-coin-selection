@@ -148,27 +148,43 @@ to one million Lovelace.
 
 A _transaction input_ is a pair of values (**_h_**, **_n_**), where:
 
- * **_h_** is the hash of an existing transaction **_t_**;
- * **_n_** is a 0-based integer index into the output list of **_t_**.
+  * **_h_** is the hash of an existing transaction **_t_**;
+  * **_n_** is a 0-based integer index into the output list of **_t_**.
 
 ### Transaction Output
 
 A _transaction output_ is a pair of values (**_t_**, **_a_**), where:
 
- * **_t_** is a [target address](#address);
- * **_a_** is a [coin amount](#coin-amount).
+  * **_t_** is a [target address](#address);
+  * **_a_** is a [coin amount](#coin-amount).
 
 ### UTxO Set
 
-A _UTxO set_ is a set of pairs of the form (**_i_**, **_o_**), where:
-
- * **_i_** is a [transaction input](#transaction-input);
- * **_o_** is a [transaction output](#transaction-output);
+A _UTxO set_ represents the unspent value associated with a wallet, and
+consists of a set of [UTxO entries](#utxo-entry).
 
 A given [transaction input](#transaction-input) can only appear _once_ in a
 given UTxO set.
 
+### UTxO Entry
+
+A _UTxO entry_ is a pair of the form (**_i_**, **_o_**), where:
+
+  * **_i_** is a [transaction input](#transaction-input);
+  * **_o_** is a [transaction output](#transaction-output);
+
 ### Coin Selection
+
+A _coin selection_ is a compound value that represents the _result_ of running
+a coin selection algorithm.
+
+It consists of three sets:
+
+  * A set of _inputs_, where each _input_ is a [UTxO entry](#utxo-entry);
+  * A set of _outputs_, where each _output_ is a
+    [transaction output](#transaction-output);
+  * A set of _change outputs_, where each _change output_ is a
+    [coin amount](#coin-amount).
 
 _(definition of coin selection)_
 
