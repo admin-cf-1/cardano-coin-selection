@@ -151,7 +151,7 @@ A _UTxO set_ represents the unspent value associated with a wallet.
 Each member of the set is a pair of the form (**_i_**, **_o_**), where:
 
   * **_i_** is a [transaction input](#transaction-input);
-  * **_o_** is a [transaction output](#transaction-output);
+  * **_o_** is a [transaction output](#transaction-output).
 
 A given [transaction input](#transaction-input) can only appear _once_ in a
 given UTxO set.
@@ -161,7 +161,8 @@ given UTxO set.
 A _transaction input_ is a pair of values (**_h_**, **_n_**), where:
 
   * **_h_** is the hash of an existing transaction **_t_**;
-  * **_n_** is a 0-based integer index into the output list of **_t_**.
+  * **_n_** is a 0-based integer index into the output list of transaction
+    **_t_**.
 
 ### Transaction Output
 
@@ -180,7 +181,7 @@ It consists of three sets:
   * A set of _inputs_, equivalent to a subset of the wallet's
     [UTxO set](#utxo-set).
   * A set of _outputs_ (see [transaction output](#transaction-output)).
-  * A set of _change values_, where each value is simply a
+  * A set of _change values_, where each change value is simply a
     [coin amount](#coin-amount).
 
 # Common Interface
