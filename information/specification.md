@@ -391,40 +391,40 @@ At all stages of processing, the algorithm maintains three pieces of state:
 
 The algorithm proceeds according to the following sequence of steps:
 
- * /Step 1/
+ * **Step 1**
 
-   Remove a single /unpaid output/ from the head of the
-   /unpaid output list/.
+   Remove a single _unpaid output_ from the head of the [unpaid output
+   list](#unpaid-output-list).
 
- * /Step 2/
+ * **Step 2**
 
-   Repeatedly remove UTxO entries from the head of the
-   /remaining UTxO list/ until the total value of entries removed is
-   /greater than or equal to/ the value of the /removed output/.
+   Repeatedly remove UTxO entries from the head of the [remaining UTxO
+   list](#remaining-utxo-list) until the total value of entries removed is
+   _greater than or equal to_ the value of the _removed output_.
 
- * /Step 3/
+ * **Step 3**
 
-   Use the /removed UTxO entries/ to pay for the /removed output/.
+   Use the _removed UTxO entries_ to pay for the _removed output_.
 
    This is achieved by:
 
-    * adding the /removed UTxO entries/ to the 'inputs' field of the
-      /accumulated coin selection/.
-    * adding the /removed output/ to the 'outputs' field of the
-      /accumulated coin selection/.
+    * adding the _removed UTxO entries_ to the _inputs_ field of the
+      [accumulated coin selection](#accumulated-coin-selection).
+    * adding the _removed output_ to the _outputs_ field of the
+      [accumulated coin selection](#accumulated-coin-selection).
 
- * /Step 4/
+ * **Step 4**
 
-   If the /total value/ of the /removed UTxO entries/ is greater than the
-   value of the /removed output/, generate a coin whose value is equal to
-   the exact difference, and add it to the 'change' field of the
-   /accumulated coin selection/.
+   If the _total value_ of the _removed UTxO entries_ is greater than the
+   value of the _removed output_, generate a coin whose value is equal to
+   the exact difference, and add it to the _change values_ field of the
+   [accumulated coin selection](#accumulated-coin-selection).
 
- * /Step 5/
+ * **Step 5**
 
-   If the /unpaid output list/ is empty, __terminate__ here.
+   If the _unpaid output list_ is empty, **terminate** here.
 
-   Otherwise, return to /Step 1/.
+   Otherwise, return to **Step 1**.
 
 ### Termination
 
