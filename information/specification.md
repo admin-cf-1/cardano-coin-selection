@@ -387,9 +387,6 @@ At all stages of processing, the algorithm maintains three pieces of state:
 
     The accumulated [coin selection](#coin-selection) is initially _empty_.
 
-    Entries are incrementally added as each output is paid for, until the
-    [unpaid output list](#unpaid-output-list) is empty.
-
 ### Order of Processing
 
 The algorithm proceeds according to the following sequence of steps:
@@ -495,36 +492,37 @@ small enough. But it is precisely when the UTxO set contains many small
 entries that it is less likely for a randomly-chosen UTxO entry to push the
 total above the upper bound.
 
-### State Maintained during Computation
+### State Maintained by the Algorithm
 
-#### Remaining UTxO Set
+At all stages of processing, the algorithm maintains two pieces of state:
 
-This is initially equal to the [initial UTxO set](#initial-utxo-set) parameter.
+ 1. #### Remaining UTxO Set
 
-#### Accumulated Coin Selection
+    This is initially equal to the [initial UTxO set](#initial-utxo-set)
+    parameter.
 
-This is initially empty.
+ 2. #### Accumulated Coin Selection
+
+    The accumulated [coin selection](#coin-selection) is initially _empty_.
 
 ### Phases of Computation
 
-This section will describe the phases of the algorithm in detail.
+As mentioned above, the algorithm proceeds in two phases.
 
 #### Phase 1: Random Selection
 
 In this phase, the algorithm iterates through each of the [requested
 outputs](#requested-output-list) in descending order of coin value, from
-largest to smallest. For each output of value **v**, the algorithm repeatedly
-selects entries at **random** from the [remaining UTxO
-set](#remaining-utxo-set), until the _total value_ of selected entries is
-greater than or equal to **v**. The selected entries are then _associated with_
-that output, and removed from the [remaining UTxO set](#remaining-utxo-set).
+largest to smallest.
+
+For each output of value **v**, the algorithm repeatedly selects entries at
+**random** from the [remaining UTxO set](#remaining-utxo-set), until the _total
+value_ of selected entries is greater than or equal to **v**. The selected
+entries are then _associated with_ that output, and removed from the [remaining
+UTxO set](#remaining-utxo-set).
 
 This phase ends when _every_ output has been associated with a selection of
 UTxO entries.
-
-However, if the remaining UTxO set is completely exhausted before all
-outputs can be processed, the algorithm terminates and falls back to the
-[Largest-First](largest-first) algorithm.
 
 #### Phase 2: Improvement
 
