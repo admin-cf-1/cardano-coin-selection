@@ -25,8 +25,8 @@
     * [Initial UTxO Set](#initial-utxo-set)
     * [Maximum Input Count](#maximum-input-count)
   * [Results](#results)
-    * [Final UTxO Set](#final-utxo-set)
     * [Coin Selection](#coin-selection)
+    * [Final UTxO Set](#final-utxo-set)
   * [Cardinality Rules](#cardinality-rules)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
@@ -428,12 +428,16 @@ The algorithm proceeds according to the following sequence of steps:
 
 ### Termination
 
-The algorithm terminates __successfully__ if the /remaining UTxO list/ is
-not depleted before the /unpaid output list/ can be fully depleted (i.e., if
-all the outputs have been paid for).
+The algorithm terminates _successfully_ if the [remaining UTxO
+list](#remaining-utxo-list) is not depleted before the [unpaid output
+list](#unpaid-output-list) can be fully depleted (i.e., if all the outputs have
+been paid for).
 
-The /accumulated coin selection/ and /remaining UTxO list/ are returned to
-the caller.
+The [accumulated coin selection](#accumulated-coin-selection) is returned
+to the caller as the final [coin selection](#coin-selection) result.
+
+The [remaining UTxO list](#remaining-utxo-list) is returned to the caller
+as the [final UTxO list](#final-utxo-list) result.
 
 ## Random-Improve
 
