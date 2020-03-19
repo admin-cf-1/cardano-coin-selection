@@ -237,7 +237,7 @@ A coin selection function produces _two_ result values:
       * A set of **_change values_**, where each change value is simply a
         [coin amount](#coin-amount).
 
-        Represents the amount of change to be returned to the wallet.
+        Represents the change to be returned to the wallet.
 
 ## Failure Modes
 
