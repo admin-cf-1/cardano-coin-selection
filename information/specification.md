@@ -146,8 +146,9 @@ to one million Lovelace.
 
 ### UTxO Set
 
-A _UTxO set_ represents the unspent value associated with wallet. Each entry
-in the set is a pair of the form (**_i_**, **_o_**), where:
+A _UTxO set_ represents the unspent value associated with a wallet.
+
+Each entry in the set is a pair of the form (**_i_**, **_o_**), where:
 
   * **_i_** is a [transaction input](#transaction-input);
   * **_o_** is a [transaction output](#transaction-output);
