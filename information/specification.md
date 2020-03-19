@@ -178,20 +178,20 @@ a coin selection algorithm.
 
 It consists of three sets:
 
-  * A set of _inputs_, equivalent to a subset of the wallet's
+  * A set of **_inputs_**, equivalent to a subset of the wallet's
     [UTxO set](#utxo-set).
 
-    _Represents the value that has been selected from the wallet in order to
-    cover the total payment value._
+    Represents the value that has been selected from the wallet in order to
+    cover the total payment value.
 
-  * A set of _outputs_ (see [transaction output](#transaction-output)).
+  * A set of **_outputs_** (see [transaction output](#transaction-output)).
 
-    _Represents the set of payments to be made to recipient addresses._
+    Represents the set of payments to be made to recipient addresses.
 
-  * A set of _change values_, where each change value is simply a
+  * A set of **_change values_**, where each change value is simply a
     [coin amount](#coin-amount).
 
-    _Represents the amount of change to be returned to the wallet._
+    Represents the amount of change to be returned to the wallet.
 
 # Common Interface
 
