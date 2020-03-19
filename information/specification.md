@@ -182,17 +182,16 @@ A _transaction output_ is a pair of values (**_t_**, **_a_**), where:
 All coin selection algorithms used by Cardano Wallet implement a _common
 interface_.
 
-Essentially, a coin selection algorithm is simply a pure mathematical
-_function_ that, when applied to a standard set of parameters, will produce a
-result value of a standard type.
+Essentially, a coin selection algorithm is simply a _pure mathematical
+function_ that, when applied to a standard set of parameters, will produce a
+standard set of results.
 
 This section defines the standard parameters accepted by coin selection
-algorithms used in Cardano Wallet, together with the standard results returned.
+algorithms used in Cardano Wallet, the standard results returned, and the
+standard set of error conditions that may occur.
 
-It also defines the set of error conditions that may occur.
-
-The terms _coin selection algorithm_ and _coin selection function_ will be used
-interchangeably in this section.
+In this section, the terms _coin selection algorithm_ and _coin selection
+function_ will be used interchangeably.
 
 ## Parameters
 
