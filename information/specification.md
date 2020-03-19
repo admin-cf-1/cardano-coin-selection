@@ -318,15 +318,17 @@ This section will describe the coin selection algorithms used by Cardano Wallet.
 These algorithms implement a [common interface](#interface), as described
 above.
 
-There are two main algorithms:
+There are two main algorithms used by Cardano Wallet:
 
   * [Largest-First](#largest-first)
   * [Random-Improve](#random-improve)
 
 In general, Cardano Wallet gives priority to the
-[Random-Improve](#random-improve) algorithm, but falls back to the
-[Largest-First](#largest-first) algorithm in the case that the former algorithm
-is unable to produce a result.
+[Random-Improve](#random-improve) algorithm.
+
+However, in rare cases where [Random-Improve](#random-improve) is unable to
+produce a result, Cardano Wallet will fall back to the
+[Largest-First](#largest-first) algorithm.
 
 ## Largest-First
 
