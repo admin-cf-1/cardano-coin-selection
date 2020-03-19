@@ -180,9 +180,18 @@ It consists of three sets:
 
   * A set of _inputs_, equivalent to a subset of the wallet's
     [UTxO set](#utxo-set).
+
+    This set represents the value that has been selected from the wallet to
+    cover the total payment value.
+
   * A set of _outputs_ (see [transaction output](#transaction-output)).
+
+    This set represents the set of payments to be made.
+
   * A set of _change values_, where each change value is simply a
     [coin amount](#coin-amount).
+
+    This set represents the change to be returned to the wallet.
 
 # Common Interface
 
