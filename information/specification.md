@@ -1,6 +1,8 @@
-| :warning: Caution! :warning:                                                                                                 |
-|------------------------------------------------------------------------------------------------------------------------------|
-| This document is still in the process of being written.<br> Sections may be rearranged, inserted, or removed without notice! |
+# Coin Selection Specification: Draft 1
+
+| Caution!                                                                                            |
+|-----------------------------------------------------------------------------------------------------|
+| This is a draft version of the specification.<br>Several details may differ from the final version. |
 
 # Contents
 
