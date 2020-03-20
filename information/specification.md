@@ -69,9 +69,9 @@ required amount, and then receive the excess value back as _change_.
 
 Similarly to how a physical wallet holds value in the form of unspent coins and
 banknotes, a Cardano wallet holds value in the form of a set of _unspent
-transaction outputs_ (UTxO), the results of previous transactions that transfer
-money to the wallet. Each output in the UTxO set has a particular _value_, and
-the total value of a wallet is the _sum_ of these values.
+transaction outputs_ (UTxO), the results of previous transactions that
+transferred money to the wallet. Each output in the UTxO set has a particular
+_value_, and the total value of a wallet is the _sum_ of these values.
 
 When using a Cardano wallet to make a payment, the wallet software must choose
 unspent outputs from the wallet's UTxO set, so that the total value of selected
@@ -82,8 +82,9 @@ the target amount exactly, the wallet software must arrange that change is paid
 back to the wallet.
 
 Coin selection refers to the process of choosing _unspent outputs_ from a
-wallet's UTxO set in order to make one or payments, and arranging for _change_
-to be paid back to the wallet by creating one or more _change outputs_.
+wallet's UTxO set in order to make one or more payments, and arranging for
+_change_ to be paid back to the wallet by creating one or more _change
+outputs_.
 
 ## Why is Coin Selection Non-Trivial?
 
