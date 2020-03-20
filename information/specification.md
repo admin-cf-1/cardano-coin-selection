@@ -285,8 +285,8 @@ There are two mutually-exclusive cases:
 
 The following laws hold:
 
-  * UTxO<sub>_selected_</sub> ⊂ UTxO<sub>_initial_</sub>
-  * UTxO<sub>_remaining_</sub> ⊆ UTxO<sub>_initial_</sub>
+  * UTxO<sub>_selected_</sub> ⊆ UTxO<sub>_initial_</sub>
+  * UTxO<sub>_remaining_</sub> ⊂ UTxO<sub>_initial_</sub>
   * UTxO<sub>_remaining_</sub> ∩ UTxO<sub>_selected_</sub> = ∅
   * UTxO<sub>_remaining_</sub> ⋃ UTxO<sub>_selected_</sub> =
     UTxO<sub>_initial_</sub>
