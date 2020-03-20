@@ -28,6 +28,7 @@
     * [Remaining UTxO Set](#remaining-utxo-set)
   * [Properties](#properties)
     * [UTxO Conservation](#utxo-conservation)
+    * [Outputs Conservation](#outputs-conservation)
   * [Cardinality Rules](#cardinality-rules)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
@@ -306,6 +307,12 @@ Where:
 
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result.
+
+### Ouputs Conservation
+
+This property states that if a coin selection algorithm successfully produces a
+[coin selection](#coin-selection) result, the _outputs_ field should be _equal
+to_ the [requested output list](#requested-output-list).
 
 ## Cardinality Rules
 
