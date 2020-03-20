@@ -274,8 +274,8 @@ A coin selection function produces the following result values:
 
 This property states that members of the [initial UTxO set](#initial-utxo-set)
 are either _selected_, in which case they are included in the _inputs_ field of
-the [coin selection](#coin-selection) result value, or _not selected_, in which
-case they are included in the [remaining UTxO set](#remaining-utxo-set).
+the [coin selection](#coin-selection) result, or _not selected_, in which case
+they are included in the [remaining UTxO set](#remaining-utxo-set).
 
 The following laws hold:
 
@@ -303,7 +303,7 @@ Where:
   * **UTxO<sub>_selected_</sub>**
 
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
-    result value.
+    result.
 
     Represents the UTxO entries that were _selected_ by the coin selection
     algorithm.
