@@ -545,7 +545,7 @@ state:
 
 ### Computation
 
-As mentioned above, the algorithm proceeds in two phases.
+The algorithm proceeds in two phases.
 
 #### Phase 1: Random Selection
 
