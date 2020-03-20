@@ -577,7 +577,7 @@ During this phase, the algorithm:
     set](#available-utxo-set)
 
   * incrementally populates the
-    [accumulated coin selection](#accumulated-coin-selection).
+    [accumulated coin selection](#accumulated-coin-selection-1).
 
 For each output of value **_v_**, the algorithm:
 
@@ -612,7 +612,8 @@ For each output of value **_v_**, the algorithm:
      of the _final UTxO selection_ for that output minus the value _v_ of
      that output.
 
- 4.  **Updates the [accumulated coin selection](#accumulated-coin-selection-1)**:
+ 4.  **Updates the [accumulated coin
+     selection](#accumulated-coin-selection-1)**:
 
       * Adds the _output_ to the _outputs_ field;
       * Adds the _improved UTxO selection_ to the _inputs_ field;
