@@ -25,7 +25,7 @@
     * [Maximum Input Count](#maximum-input-count)
   * [Results](#results)
     * [Coin Selection](#coin-selection)
-    * [Final UTxO Set](#final-utxo-set)
+    * [Remaining UTxO Set](#remaining-utxo-set)
   * [Properties](#properties)
     * [UTxO Conservation](#utxo-conservation)
   * [Cardinality Rules](#cardinality-rules)
@@ -255,9 +255,9 @@ A coin selection function produces the following result values:
 
         Represents the change to be returned to the wallet.
 
- 2. #### Final UTxO Set
+ 2. #### Remaining UTxO Set
 
-    The _final UTxO set_ is a subset of the [initial UTxO
+    The _remaining UTxO set_ is a subset of the [initial UTxO
     set](#initial-utxo-set).
 
     It represents the set of values that remain after the coin selection
@@ -265,7 +265,7 @@ A coin selection function produces the following result values:
     list](#requested-output-list).
 
     If a coin selection algorithm is applied to the _complete_ UTxO set of a
-    wallet, then the final UTxO set represents the _updated_ UTxO set of the
+    wallet, then the remaining UTxO set represents the _updated_ UTxO set of the
     wallet.
 
 ## Properties
@@ -275,7 +275,7 @@ A coin selection function produces the following result values:
 This property states that members of the [initial UTxO set](#initial-utxo-set)
 are either _selected_, in which case they are included in the _inputs_ field of
 the [coin selection](#coin-selection) result value, or _not selected_, in which
-case they are included in the [final UTxO set](#final-utxo-set).
+case they are included in the [remaining UTxO set](#remaining-utxo-set).
 
 The following laws hold:
 
@@ -295,7 +295,7 @@ Where:
 
   * **UTxO<sub>_remaining_</sub>**
 
-    is the [final UTxO set](#final-utxo-set).
+    is the [remaining UTxO set](#remaining-utxo-set).
 
     Represents the UTxO entries that were _not selected_ by the coin selection
     algorithm.
@@ -468,7 +468,7 @@ The [accumulated coin selection](#accumulated-coin-selection) is returned
 to the caller as the [coin selection](#coin-selection) result.
 
 The [remaining UTxO list](#remaining-utxo-list) is returned to the caller
-as the [final UTxO set](#final-utxo-set) result.
+as the [remaining UTxO set](#remaining-utxo-set) result.
 
 ## Random-Improve
 
@@ -623,5 +623,4 @@ When both phases are complete, the algorithm terminates.
 The [accumulated coin selection](#accumulated-coin-selection-1) is returned
 to the caller as the [coin selection](#coin-selection) result.
 
-The [remaining UTxO set](#remaining-utxo-set) is returned to the caller
-as the [final UTxO set](#final-utxo-set) result.
+The [remaining UTxO set](#remaining-utxo-set) is returned to the caller.
