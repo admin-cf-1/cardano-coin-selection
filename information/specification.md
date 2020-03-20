@@ -25,6 +25,8 @@
     * [Coin Selection](#coin-selection)
     * [Remaining UTxO Set](#remaining-utxo-set)
   * [Properties](#properties)
+    * [Coverage of Payments](#coverage-of-payments)
+    * [Correctness of Change](#correctness-of-change)
     * [Conservation of UTxO](#conservation-of-utxo)
     * [Conservation of Outputs](#conservation-of-outputs)
     * [Cardinality](#cardinality)
@@ -273,6 +275,51 @@ A coin selection function produces the following result values:
     wallet.
 
 ## Properties
+
+### Coverage of Payments
+
+This property states that the [coin selection](#coin-selection) is sufficient
+to _cover_ the [requested payments](#requested-output-list).
+
+Formally:
+
+  * V<sub>_selected_</sub> ≥ V<sub>_requested_</sub>
+
+Where:
+
+  * V<sub>_requested_</sub>
+
+    is the total value of the [requested output list](#requested-output-list)
+
+
+  * V<sub>_selected_</sub>
+
+    is the total value of the _inputs_ field of the [coin
+    selection](#coin-selection) result.
+
+### Correctness of Change
+
+This property states that the correct amount of _change_ was generated.
+
+Formally:
+
+  * V<sub>_requested_</sub> = V<sub>_selected_</sub> − V<sub>_change_</sub>
+
+Where:
+
+  * V<sub>_requested_</sub>
+
+    is the total value of the [requested output list](#requested-output-list)
+
+  * V<sub>_selected_</sub>
+
+    is the total value of the _inputs_ field of the [coin
+    selection](#coin-selection) result.
+
+  * V<sub>_change_</sub>
+
+    is the total value of the _change_ field of the [coin
+    selection](#coin-selection) result.
 
 ### Conservation of UTxO
 
