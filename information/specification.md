@@ -11,7 +11,7 @@
   * [What is Coin Selection?](#what-is-coin-selection)
   * [Why is Coin Selection Non-Trivial?](#why-is-coin-selection-non-trivial)
     * [Issues](#issues)
-    * [Desirable Properties](#desirable-properties)
+    * [Goals](#goals)
 * [Definitions](#definitions)
   * [Address](#address)
   * [Coin Amount](#coin-amount)
@@ -120,7 +120,7 @@ complicated than it would initially appear.
        considered to have negative privacy implications. The discussion of
        privacy issues is beyond the scope of this article.
 
-### Desirable Properties
+### Goals
 
 There are several desirable properties that we would like a coin selection
 algorithm to have. These properties include:
@@ -476,10 +476,10 @@ amount of dust that accumulates in the UTxO set.
 
 #### Principle 2: Change Management
 
-As mentioned in the [Desirable Properties](#desirable-properties) section, it
-is desirable that coin selection algorithms, over time, are able to create UTxO
-sets that have _useful_ outputs: outputs that will allow us to process future
-payments with a minimum number of inputs.
+As mentioned in the [Goals](#goals) section, it is desirable that coin
+selection algorithms, over time, are able to create UTxO sets that have
+_useful_ outputs: outputs that will allow us to process future payments with a
+minimum number of inputs.
 
 If for each payment request of value **v** we create a change output of
 _roughly_ the same value **v**, then we will end up with a distribution of
