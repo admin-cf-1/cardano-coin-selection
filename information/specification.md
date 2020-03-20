@@ -1,7 +1,9 @@
-| :warning: Caution!                                               |
+|------------------------------------------------------------------|
+| :warning: Caution! :warning:                                     |
 |------------------------------------------------------------------|
 | This document is still in the process of being written.          |
 | Sections may be rearranged, inserted, or removed without notice! |
+|------------------------------------------------------------------|
 
 # Contents
 
