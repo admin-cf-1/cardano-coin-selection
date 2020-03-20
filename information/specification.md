@@ -302,16 +302,10 @@ Where:
 
     is the [remaining UTxO set](#remaining-utxo-set).
 
-    Represents the UTxO entries that were _not selected_ by the coin selection
-    algorithm.
-
   * **UTxO<sub>_selected_</sub>**
 
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result.
-
-    Represents the UTxO entries that were _selected_ by the coin selection
-    algorithm.
 
 ## Cardinality Rules
 
