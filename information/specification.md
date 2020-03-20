@@ -273,7 +273,9 @@ A coin selection function produces the following result values:
 ### UTxO Conservation
 
 This property states that members of the [initial UTxO set](#initial-utxo-set)
-are _conserved_ in the [results](#results). There are two cases:
+are _conserved_ in the [results](#results).
+
+There are two mutually-exclusive cases:
 
   * If a UTxO entry is _selected_ by the coin selection algorithm, it is
     included in the _inputs_ field of the [coin selection](#coin-selection)
