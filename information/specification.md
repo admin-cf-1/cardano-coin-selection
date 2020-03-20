@@ -193,7 +193,7 @@ All coin selection algorithms used by Cardano Wallet implement a _common
 interface_.
 
 Essentially, a coin selection algorithm is simply a _mathematical function_
-that when applied to a [standard set of parameters](#parameters), will produce
+that, when applied to a [standard set of parameters](#parameters), will produce
 a [standard set of results](#results).
 
 This section defines the [parameters](#parameters) accepted by coin selection
