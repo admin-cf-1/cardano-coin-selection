@@ -29,7 +29,7 @@
   * [Properties](#properties)
     * [UTxO Conservation](#utxo-conservation)
     * [Outputs Conservation](#outputs-conservation)
-  * [Cardinality Rules](#cardinality-rules)
+    * [Cardinality](#cardinality)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
     * [UTxO Not Fragmented Enough](#utxo-not-fragmented-enough)
@@ -316,7 +316,7 @@ is _conserved_ in the [coin selection](#coin-selection) result.
 In particular, the _outputs_ field of the [coin selection](#coin-selection)
 result should be _equal to_ the [requested output list](#requested-output-list).
 
-## Cardinality Rules
+### Cardinality
 
 All algorithms require that:
 
