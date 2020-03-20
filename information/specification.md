@@ -308,7 +308,7 @@ Where:
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result.
 
-### Ouputs Conservation
+### Outputs Conservation
 
 This property states that the [requested output list](#requested-output-list)
 is _conserved_ in the [coin selection](#coin-selection) result.
