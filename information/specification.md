@@ -53,6 +53,8 @@
       * [Phase 1: Random Selection](#phase-1-random-selection)
       * [Phase 2: Improvement](#phase-2-improvement)
     * [Termination](#termination-1)
+* [External Resources](#external-resources)
+  * [Self Organization in Coin Selection](#self-organization-in-coin-selection)
 
 # Purpose
 
@@ -632,3 +634,9 @@ to the caller as the [coin selection](#coin-selection) result.
 
 The [available UTxO set](#available-utxo-set) is returned to the caller as the
 [remaining UTxO set](#remaining-utxo-set) result.
+
+# External Resources
+
+## Self Organization in Coin Selection
+
+https://cardanofoundation.org/en/news/self-organisation-in-coin-selection/
