@@ -287,13 +287,18 @@ The following laws hold:
 
 Where:
 
-  * **UTxO<sub>_initial_</sub>** is the [initial UTxO
-    set](#initial-utxo-set).
+  * **UTxO<sub>_initial_</sub>**
 
-  * **UTxO<sub>_final_</sub>** is the [final UTxO set](#final-utxo-set).
+    is the [initial UTxO set](#initial-utxo-set).
 
-  * **UTxO<sub>_selected_</sub>** is the value of the _inputs_ field of the
-    [coin selection](#coin-selection) result value.
+  * **UTxO<sub>_final_</sub>**
+
+    is the [final UTxO set](#final-utxo-set).
+
+  * **UTxO<sub>_selected_</sub>**
+
+    is the value of the _inputs_ field of the [coin selection](#coin-selection)
+    result value.
 
 ## Cardinality Rules
 
