@@ -445,7 +445,7 @@ list](#unpaid-output-list) can be fully depleted (i.e., if all the outputs have
 been paid for).
 
 The [accumulated coin selection](#accumulated-coin-selection) is returned
-to the caller as the [final coin selection](#coin-selection) result.
+to the caller as the [coin selection](#coin-selection) result.
 
 The [remaining UTxO list](#remaining-utxo-list) is returned to the caller
 as the [final UTxO set](#final-utxo-set) result.
@@ -601,7 +601,7 @@ sooner.
 When both phases are complete, the algorithm terminates.
 
 The [accumulated coin selection](#accumulated-coin-selection-1) is returned
-to the caller as the [final coin selection](#coin-selection) result.
+to the caller as the [coin selection](#coin-selection) result.
 
 The [remaining UTxO set](#remaining-utxo-set) is returned to the caller
 as the [final UTxO set](#final-utxo-set) result.
