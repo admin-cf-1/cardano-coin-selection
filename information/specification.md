@@ -308,6 +308,11 @@ Formally:
 
 Where:
 
+  * V<sub>_change_</sub>
+
+    is the total value of the _change_ field of the [coin
+    selection](#coin-selection) result.
+
   * V<sub>_requested_</sub>
 
     is the total value of the [requested output list](#requested-output-list)
@@ -315,11 +320,6 @@ Where:
   * V<sub>_selected_</sub>
 
     is the total value of the _inputs_ field of the [coin
-    selection](#coin-selection) result.
-
-  * V<sub>_change_</sub>
-
-    is the total value of the _change_ field of the [coin
     selection](#coin-selection) result.
 
 ### Conservation of UTxO
