@@ -556,8 +556,8 @@ largest to smallest.
 For each output of value **v**, the algorithm repeatedly selects entries at
 **random** from the [available UTxO set](#available-utxo-set), until the _total
 value_ of selected entries is greater than or equal to **v**. The selected
-entries are then _associated with_ that output, and removed from the [available
-UTxO set](#available-utxo-set).
+entries are then _associated with_ that output, and _removed_ from the
+[available UTxO set](#available-utxo-set).
 
 This phase ends when _every_ output has been associated with a selection of
 UTxO entries.
