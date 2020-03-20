@@ -398,7 +398,7 @@ entry is always considered **first**.
 At all stages of processing, the algorithm maintains the following pieces of
 state:
 
- 1. #### Remaining UTxO List
+ 1. #### Available UTxO List
 
     This is initially equal to the [initial UTxO set](#initial-utxo-set),
     sorted into _descending order of coin value_.
@@ -437,8 +437,8 @@ The algorithm proceeds according to the following sequence of steps:
 
  * **Step 2**
 
-   Repeatedly remove UTxO entries from the head of the [remaining UTxO
-   list](#remaining-utxo-list) until the total value of entries removed is
+   Repeatedly remove UTxO entries from the head of the [available UTxO
+   list](#available-utxo-list) until the total value of entries removed is
    _greater than or equal to_ the value of the _removed output_.
 
  * **Step 3**
@@ -467,15 +467,15 @@ The algorithm proceeds according to the following sequence of steps:
 
 ### Termination
 
-The algorithm terminates _successfully_ if the [remaining UTxO
-list](#remaining-utxo-list) is not depleted before the [unpaid output
+The algorithm terminates _successfully_ if the [available UTxO
+list](#available-utxo-list) is not depleted before the [unpaid output
 list](#unpaid-output-list) can be fully depleted (i.e., if all the outputs have
 been paid for).
 
 The [accumulated coin selection](#accumulated-coin-selection) is returned
 to the caller as the [coin selection](#coin-selection) result.
 
-The [remaining UTxO list](#remaining-utxo-list) is returned to the caller
+The [available UTxO list](#available-utxo-list) is returned to the caller
 as the [remaining UTxO set](#remaining-utxo-set) result.
 
 ## Random-Improve
@@ -536,7 +536,7 @@ total above the upper bound.
 At all stages of processing, the algorithm maintains the following pieces of
 state:
 
- 1. #### Remaining UTxO Set
+ 1. #### Available UTxO Set
 
     This is initially equal to the [initial UTxO set](#initial-utxo-set).
 
@@ -556,10 +556,10 @@ outputs](#requested-output-list) in descending order of coin value, from
 largest to smallest.
 
 For each output of value **v**, the algorithm repeatedly selects entries at
-**random** from the [remaining UTxO set](#remaining-utxo-set), until the _total
+**random** from the [available UTxO set](#available-utxo-set), until the _total
 value_ of selected entries is greater than or equal to **v**. The selected
-entries are then _associated with_ that output, and removed from the [remaining
-UTxO set](#remaining-utxo-set).
+entries are then _associated with_ that output, and removed from the [available
+UTxO set](#available-utxo-set).
 
 This phase ends when _every_ output has been associated with a selection of
 UTxO entries.
@@ -575,8 +575,8 @@ During this phase, the algorithm:
 
   * processes outputs in _ascending order of coin value_.
 
-  * continues to maintain the [remaining UTxO set](#remaining-utxo-set)
-    produced by the previous phase.
+  * continues to select values from the [available UTxO
+    set](#available-utxo-set)
 
   * incrementally populates the
     [accumulated coin selection](#accumulated-coin-selection).
@@ -589,8 +589,8 @@ For each output of value **_v_**, the algorithm:
      (_minimum_, _ideal_, _maximum_) = (_v_, _2v_, _2v_)
 
  2.  **Attempts to improve upon the existing UTxO selection** for that output,
-     by repeatedly selecting additional entries at random from the [remaining
-     UTxO set](#remaining-utxo-set), stopping when the selection can be
+     by repeatedly selecting additional entries at random from the [available
+     UTxO set](#available-utxo-set), stopping when the selection can be
      improved upon no further.
 
      A selection with value _v1_ is considered to be an _improvement_ over a
@@ -621,7 +621,7 @@ For each output of value **_v_**, the algorithm:
       * Adds the _change value_ to the _change values_ field.
 
 This phase ends when every output has been processed, **or** when the
-[remaining UTxO set](#remaining-utxo-set) has been exhausted, whichever occurs
+[available UTxO set](#available-utxo-set) has been exhausted, whichever occurs
 sooner.
 
 ### Termination
@@ -631,4 +631,5 @@ When both phases are complete, the algorithm terminates.
 The [accumulated coin selection](#accumulated-coin-selection-1) is returned
 to the caller as the [coin selection](#coin-selection) result.
 
-The [remaining UTxO set](#remaining-utxo-set) is returned to the caller.
+The [available UTxO set](#available-utxo-set) is returned to the caller as the
+[remaining UTxO set](#remaining-utxo-set) result.
