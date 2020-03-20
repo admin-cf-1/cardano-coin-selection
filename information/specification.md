@@ -279,11 +279,11 @@ case they are included in the [final UTxO set](#final-utxo-set).
 
 The following laws hold:
 
-  * UTxO<sub>_final_</sub> =
-    UTxO<sub>_initial_</sub> \ UTxO<sub>_selected_</sub>
-
   * UTxO<sub>_initial_</sub> =
     UTxO<sub>_final_</sub> ⋃ UTxO<sub>_selected_</sub>
+
+  * UTxO<sub>_final_</sub> =
+    UTxO<sub>_initial_</sub> \ UTxO<sub>_selected_</sub>
 
 Where:
 
