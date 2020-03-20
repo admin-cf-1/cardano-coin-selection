@@ -371,7 +371,7 @@ There are two main algorithms used by Cardano Wallet:
   * [Largest-First](#largest-first)
   * [Random-Improve](#random-improve)
 
-In general, Cardano Wallet gives priority to the
+In general, Cardano Wallet gives _priority_ to the
 [Random-Improve](#random-improve) algorithm.
 
 However, in rare cases where [Random-Improve](#random-improve) is unable to
