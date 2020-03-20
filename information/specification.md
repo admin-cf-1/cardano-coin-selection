@@ -293,7 +293,7 @@ Where:
 
     is the [initial UTxO set](#initial-utxo-set).
 
-  * **UTxO<sub>_final_</sub>**
+  * **UTxO<sub>_remaining_</sub>**
 
     is the [final UTxO set](#final-utxo-set).
 
