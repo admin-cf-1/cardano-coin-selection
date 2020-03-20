@@ -295,18 +295,15 @@ The following laws hold:
 Where:
 
   * **UTxO<sub>_initial_</sub>**
-
     is the [initial UTxO set](#initial-utxo-set).
 
   * **UTxO<sub>_remaining_</sub>**
-
     is the [remaining UTxO set](#remaining-utxo-set).
 
     Represents the UTxO entries that were _not selected_ by the coin selection
     algorithm.
 
   * **UTxO<sub>_selected_</sub>**
-
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result.
 
