@@ -280,7 +280,7 @@ A coin selection function produces the following result values:
 
 This property states that the total value of the [coin
 selection](#coin-selection) result is sufficient to _cover_ the total value of
-the [requested payment list](#requested-output-list).
+the [requested output list](#requested-output-list).
 
 Formally:
 
