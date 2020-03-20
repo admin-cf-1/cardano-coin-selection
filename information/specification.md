@@ -34,15 +34,19 @@
     * [Maximum Input Count Exceeded](#maximum-input-count-exceeded)
 * [Implementations](#implementations)
   * [Largest-First](#largest-first)
+    * [State](#state)
+    * [Computation](#computation)
+    * [Termination](#termination)
   * [Random-Improve](#random-improve)
     * [Motivating Principles](#motivating-principles)
       * [Principle 1: Dust Management](#principle-1-dust-management)
       * [Principle 2: Change Management](#principle-2-change-management)
       * [Principle 3: Performance Management](#principle-3-performance-management)
-    * [Phases of Computation](#phases-of-computation)
+    * [State](#state-1)
+    * [Computation](#computation-1)
       * [Phase 1: Random Selection](#phase-1-random-selection)
       * [Phase 2: Improvement](#phase-2-improvement)
-    * [Termination](#termination)
+    * [Termination](#termination-1)
 
 # Purpose
 
@@ -356,7 +360,7 @@ value of that output.
 The name of the algorithm is taken from the idea that the **largest** UTxO
 entry is always considered **first**.
 
-### State Maintained by the Algorithm
+### State
 
 At all stages of processing, the algorithm maintains the following pieces of
 state:
@@ -389,7 +393,7 @@ state:
     The accumulated coin selection is a [coin selection|#coin-selection) where
     all fields are initially equal to the _empty set_.
 
-### Order of Processing
+### Computation
 
 The algorithm proceeds according to the following sequence of steps:
 
@@ -494,7 +498,7 @@ small enough. But it is precisely when the UTxO set contains many small
 entries that it is less likely for a randomly-chosen UTxO entry to push the
 total above the upper bound.
 
-### State Maintained by the Algorithm
+### State
 
 At all stages of processing, the algorithm maintains the following pieces of
 state:
@@ -508,7 +512,7 @@ state:
     The accumulated coin selection is a [coin selection|#coin-selection) where
     all fields are initially equal to the _empty set_.
 
-### Phases of Computation
+### Computation
 
 As mentioned above, the algorithm proceeds in two phases.
 
