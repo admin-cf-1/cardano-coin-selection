@@ -278,8 +278,9 @@ A coin selection function produces the following result values:
 
 ### Coverage of Payments
 
-This property states that the [coin selection](#coin-selection) result is
-sufficient to _cover_ the [requested payments](#requested-output-list).
+This property states that the total value of the [coin
+selection](#coin-selection) result is sufficient to _cover_ the total value of
+the [requested payment list](#requested-output-list).
 
 Formally:
 
