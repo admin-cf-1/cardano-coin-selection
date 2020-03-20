@@ -304,7 +304,7 @@ This property states that the correct amount of _change_ was generated.
 
 Formally:
 
-  * V<sub>_requested_</sub> = V<sub>_selected_</sub> − V<sub>_change_</sub>
+  * V<sub>_selected_</sub> = V<sub>_requested_</sub> + V<sub>_change_</sub>
 
 Where:
 
