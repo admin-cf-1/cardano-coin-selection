@@ -282,7 +282,7 @@ This property states that the total value of the [coin
 selection](#coin-selection) result is sufficient to _cover_ the total value of
 the [requested output list](#requested-output-list).
 
-Formally:
+In particular:
 
   * V<sub>_selected_</sub> ≥ V<sub>_requested_</sub>
 
@@ -302,7 +302,7 @@ Where:
 
 This property states that the correct amount of _change_ was generated.
 
-Formally:
+In particular:
 
   * V<sub>_selected_</sub> = V<sub>_requested_</sub> + V<sub>_change_</sub>
 
