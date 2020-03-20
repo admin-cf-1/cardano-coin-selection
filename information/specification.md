@@ -144,6 +144,9 @@ algorithm to have. These properties include:
  * A coin selection algorithm should employ strategies to limit the
    amount of _dust_ that accumulates in the UTxO set.
 
+For more information on dust avoidance, see [Self Organisation in Coin
+Selection](#self-organization-in-coin-selection).
+
 # Definitions
 
 ### Address
