@@ -395,7 +395,7 @@ state:
 
  3. #### Accumulated Coin Selection
 
-    The accumulated coin selection is a [coin selection|#coin-selection) where
+    The accumulated coin selection is a [coin selection](#coin-selection) where
     all fields are initially equal to the _empty set_.
 
 ### Computation
@@ -514,7 +514,7 @@ state:
 
  2. #### Accumulated Coin Selection
 
-    The accumulated coin selection is a [coin selection|#coin-selection) where
+    The accumulated coin selection is a [coin selection](#coin-selection) where
     all fields are initially equal to the _empty set_.
 
 ### Computation
