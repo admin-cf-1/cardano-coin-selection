@@ -26,6 +26,8 @@
   * [Results](#results)
     * [Coin Selection](#coin-selection)
     * [Final UTxO Set](#final-utxo-set)
+  * [Properties](#properties)
+    * [UTxO Conservation](#utxo-conservation)
   * [Cardinality Rules](#cardinality-rules)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
@@ -253,7 +255,7 @@ A coin selection function produces the following result values:
 
         Represents the change to be returned to the wallet.
 
- 1. #### Final UTxO Set
+ 2. #### Final UTxO Set
 
     The _final UTxO set_ is a subset of the [initial UTxO
     set](#initial-utxo-set).
@@ -266,27 +268,33 @@ A coin selection function produces the following result values:
     wallet, then the final UTxO set represents the _updated_ UTxO set of the
     wallet.
 
-    The set difference between the _final UTxO set_ and the _initial UTxO set_
-    is equal to the _inputs_ field of the [coin selection](#coin-selection)
-    result value.
+## Properties
 
-    Stated more formally, the following laws hold:
+### UTxO Conservation
 
-      * UTxO<sub>_final_</sub> =
-        UTxO<sub>_initial_</sub> \ UTxO<sub>_selected_</sub>
+This property states that UTxO entries from the [initial UTxO
+set](#initial-utxo-set) are either _selected_, in which case they are included
+in the _inputs_ field of the [coin selection](#coin-selection) result value, or
+_not selected_, in which case they are included in the [final UTxO
+set](#final-utxo-set).
 
-      * UTxO<sub>_initial_</sub> =
-        UTxO<sub>_final_</sub> ⋃ UTxO<sub>_selected_</sub>
+The following laws hold:
 
-    Where:
+  * UTxO<sub>_final_</sub> =
+    UTxO<sub>_initial_</sub> \ UTxO<sub>_selected_</sub>
 
-      * **UTxO<sub>_initial_</sub>** is the [initial UTxO
-        set](#initial-utxo-set).
+  * UTxO<sub>_initial_</sub> =
+    UTxO<sub>_final_</sub> ⋃ UTxO<sub>_selected_</sub>
 
-      * **UTxO<sub>_final_</sub>** is the [final UTxO set](#final-utxo-set).
+Where:
 
-      * **UTxO<sub>_selected_</sub>** is the value of the _inputs_ field of the
-        [coin selection](#coin-selection) result value.
+  * **UTxO<sub>_initial_</sub>** is the [initial UTxO
+    set](#initial-utxo-set).
+
+  * **UTxO<sub>_final_</sub>** is the [final UTxO set](#final-utxo-set).
+
+  * **UTxO<sub>_selected_</sub>** is the value of the _inputs_ field of the
+    [coin selection](#coin-selection) result value.
 
 ## Cardinality Rules
 
