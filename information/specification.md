@@ -196,10 +196,9 @@ Essentially, a coin selection algorithm is simply a _mathematical function_
 that when applied to a [standard set of parameters](#parameters), will produce
 a [standard set of results](#results).
 
-This section defines the [standard parameters](#parameters) accepted by coin
-selection algorithms used in Cardano Wallet, the [standard results](#results)
-returned, as well as the set of [error conditions](#failure-modes) that may
-occur.
+This section defines the [parameters](#parameters) accepted by coin selection
+algorithms used in Cardano Wallet, the [results](#results) returned, as well as
+the various [error conditions](#failure-modes) that may occur.
 
 In this section, the terms _coin selection algorithm_ and _coin selection
 function_ will be used interchangeably.
