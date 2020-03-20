@@ -27,8 +27,8 @@
     * [Coin Selection](#coin-selection)
     * [Remaining UTxO Set](#remaining-utxo-set)
   * [Properties](#properties)
-    * [UTxO Conservation](#utxo-conservation)
-    * [Outputs Conservation](#outputs-conservation)
+    * [Conservation of UTxO](#conservation-of-utxo)
+    * [Conservation of Outputs](#conservation-of-outputs)
     * [Cardinality](#cardinality)
   * [Failure Modes](#failure-modes)
     * [UTxO Balance Insufficient](#utxo-balance-insufficient)
@@ -271,7 +271,7 @@ A coin selection function produces the following result values:
 
 ## Properties
 
-### UTxO Conservation
+### Conservation of UTxO
 
 This property states that the [initial UTxO set](#initial-utxo-set) is
 _conserved_ in the [results](#results).
@@ -308,7 +308,7 @@ Where:
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result.
 
-### Outputs Conservation
+### Conservation of Outputs
 
 This property states that the [requested output list](#requested-output-list)
 is _conserved_ in the [coin selection](#coin-selection) result.
