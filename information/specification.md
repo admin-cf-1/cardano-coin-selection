@@ -386,9 +386,8 @@ state:
 
  3. #### Accumulated Coin Selection
 
-    The accumulated [coin selection](#coin-selection) is initially _empty_.
-
-    TODO: Consider removing this section.
+    The accumulated coin selection is a [coin selection|#coin-selection) where
+    all fields are initially equal to the _empty set_.
 
 ### Order of Processing
 
@@ -506,9 +505,8 @@ state:
 
  2. #### Accumulated Coin Selection
 
-    The accumulated [coin selection](#coin-selection) is initially _empty_.
-
-    TODO: Consider removing this section.
+    The accumulated coin selection is a [coin selection|#coin-selection) where
+    all fields are initially equal to the _empty set_.
 
 ### Phases of Computation
 
@@ -579,7 +577,7 @@ For each output of value **_v_**, the algorithm:
      of the _final UTxO selection_ for that output minus the value _v_ of
      that output.
 
- 4.  **Updates the [accumulated coin selection](#accumulated-coin-selection)**:
+ 4.  **Updates the [accumulated coin selection](#accumulated-coin-selection-1)**:
 
       * Adds the _output_ to the _outputs_ field;
       * Adds the _improved UTxO selection_ to the _inputs_ field;
@@ -593,6 +591,6 @@ sooner.
 
 When both phases are complete, the algorithm terminates.
 
-The [accumulated coin selection](#accumulated-coin-selection) and [remaining
+The [accumulated coin selection](#accumulated-coin-selection-1) and [remaining
 UTxO set](#remaining-utxo-set) are returned to the caller.
 
