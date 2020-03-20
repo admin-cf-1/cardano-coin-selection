@@ -600,6 +600,8 @@ sooner.
 
 When both phases are complete, the algorithm terminates.
 
-The [accumulated coin selection](#accumulated-coin-selection-1) and [remaining
-UTxO set](#remaining-utxo-set) are returned to the caller.
+The [accumulated coin selection](#accumulated-coin-selection-1) is returned
+to the caller as the [final coin selection](#coin-selection) result.
 
+The [remaining UTxO set](#remaining-utxo-set) is returned to the caller
+as the [final UTxO set](#final-utxo-set) result.
