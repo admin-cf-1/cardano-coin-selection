@@ -293,19 +293,19 @@ Where:
 
     is the [initial UTxO set](#initial-utxo-set).
 
+  * **UTxO<sub>_remaining_</sub>**
+
+    is the [final UTxO set](#final-utxo-set).
+
+    Represents the UTxO entries that were _not selected_ by the coin selection
+    algorithm.
+
   * **UTxO<sub>_selected_</sub>**
 
     is the value of the _inputs_ field of the [coin selection](#coin-selection)
     result value.
 
     Represents the UTxO entries that were _selected_ by the coin selection
-    algorithm.
-
-  * **UTxO<sub>_remaining_</sub>**
-
-    is the [final UTxO set](#final-utxo-set).
-
-    Represents the UTxO entries that were _not selected_ by the coin selection
     algorithm.
 
 ## Cardinality Rules
